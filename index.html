@@ -1,300 +1,243 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="KALHOR ENERGY (KALH) is an independent, open-source Proof-of-Work blockchain project in early development.">
-  <meta name="theme-color" content="#101010">
-  <title>KALHOR ENERGY | Independent Proof-of-Work Blockchain</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: #101010;
-      color: #eeeeee;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.7;
-    }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(1100px, 90%); margin: auto; }
-    header {
-      border-bottom: 1px solid #303030;
-      background: #101010;
-    }
-    nav {
-      min-height: 76px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .brand { color: #e5bd55; font-size: 21px; font-weight: bold; letter-spacing: 1px; }
-    nav ul { display: flex; list-style: none; gap: 22px; flex-wrap: wrap; }
-    nav a:hover { color: #e5bd55; }
-    .hero { text-align: center; padding: 105px 15px 90px; }
-    .eyebrow { color: #e5bd55; letter-spacing: 3px; font-size: 13px; }
-    h1 { font-size: clamp(38px, 7vw, 68px); line-height: 1.15; margin: 18px 0; }
-    h1 span, h2 span { color: #e5bd55; }
-    .hero p { max-width: 720px; margin: 0 auto 25px; color: #c4c4c4; font-size: 18px; }
-    .status {
-      display: inline-block;
-      border: 1px solid #b99542;
-      color: #e5bd55;
-      border-radius: 30px;
-      padding: 7px 17px;
-      font-size: 13px;
-      margin-top: 12px;
-    }
-    section { padding: 75px 0; border-top: 1px solid #292929; }
-    h2 { font-size: 32px; margin-bottom: 20px; }
-    .intro { color: #c5c5c5; max-width: 780px; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      margin-top: 30px;
-    }
-    .card {
-      background: #191919;
-      border: 1px solid #333;
-      border-radius: 12px;
-      padding: 24px;
-    }
-    .card h3 { color: #e5bd55; margin-bottom: 10px; }
-    .card p { color: #c4c4c4; font-size: 15px; }
-    .token-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 25px;
-      background: #191919;
-    }
-    .token-table th, .token-table td {
-      padding: 15px;
-      text-align: left;
-      border-bottom: 1px solid #383838;
-    }
-    .token-table th { color: #e5bd55; }
-    .note {
-      margin-top: 20px;
-      color: #aaa;
-      font-size: 14px;
-    }
-    .roadmap { border-left: 2px solid #b99542; padding-left: 22px; margin-top: 25px; }
-    .roadmap-item { margin-bottom: 25px; }
-    .roadmap-item h3 { color: #e5bd55; }
-    .roadmap-item p { color: #c4c4c4; }
-    .notice {
-      background: #201d15;
-      border: 1px solid #75602d;
-      border-radius: 12px;
-      padding: 22px;
-      color: #e6d6ac;
-      margin-top: 25px;
-    }
-    footer {
-      border-top: 1px solid #333;
-      padding: 30px 0;
-      text-align: center;
-      color: #999;
-      font-size: 14px;
-    }
-    @media (max-width: 600px) {
-      nav { padding: 15px 0; }
-      nav ul { gap: 12px; font-size: 13px; }
-      .hero { padding: 75px 5px; }
-      .token-table th, .token-table td { padding: 10px 7px; font-size: 13px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="KALHOR ENERGY (KALH) — An independent blockchain project inspired by Proof of Work, decentralization and transparent digital economics.">
+<title>KALHOR ENERGY | KALH</title>
+<style>
+:root {
+  --bg:#080d16;
+  --panel:#111b2b;
+  --gold:#e5b84b;
+  --text:#f3f5f8;
+  --muted:#aab5c5;
+  --line:#26354a;
+}
+* {box-sizing:border-box;scroll-behavior:smooth}
+body {
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+}
+header {
+  padding:22px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid var(--line);
+}
+.logo {font-size:22px;font-weight:bold;letter-spacing:2px;color:var(--gold)}
+nav a {
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:18px;
+  font-size:14px;
+}
+nav a:hover {color:var(--gold)}
+.hero {
+  text-align:center;
+  padding:110px 20px 100px;
+  background:radial-gradient(ellipse at top,#1b2b42 0%,var(--bg) 70%);
+}
+.hero h1 {
+  font-size:clamp(38px,7vw,70px);
+  margin:0;
+  letter-spacing:4px;
+}
+.hero h1 span {color:var(--gold)}
+.hero p {
+  max-width:760px;
+  margin:24px auto;
+  color:var(--muted);
+  font-size:18px;
+}
+.button {
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 25px;
+  border:1px solid var(--gold);
+  color:var(--gold);
+  text-decoration:none;
+  border-radius:5px;
+}
+section {padding:75px 9%;max-width:1250px;margin:auto}
+h2 {font-size:32px;color:var(--gold);margin-top:0}
+.intro {color:var(--muted);max-width:850px}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  margin-top:30px;
+}
+.card {
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:25px;
+}
+.card h3 {color:var(--gold);margin-top:0}
+.card p {color:var(--muted)}
+.stat {font-size:30px;color:var(--gold);font-weight:bold}
+.roadmap li {margin:18px 0;color:var(--muted)}
+footer {
+  border-top:1px solid var(--line);
+  text-align:center;
+  padding:35px 15px;
+  color:var(--muted);
+  font-size:13px;
+}
+.notice {
+  background:#192337;
+  border-left:3px solid var(--gold);
+  padding:18px;
+  color:var(--muted);
+  border-radius:4px;
+}
+@media(max-width:700px) {
+  header {display:block;text-align:center}
+  nav {margin-top:15px}
+  nav a {display:inline-block;margin:5px 8px}
+  .hero {padding:75px 18px}
+  section {padding:55px 7%}
+}
+</style>
 </head>
 <body>
 
 <header>
-  <div class="container">
-    <nav>
-      <a class="brand" href="#">KALHOR ENERGY</a>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#technology">Technology</a></li>
-        <li><a href="#tokenomics">Tokenomics</a></li>
-        <li><a href="#roadmap">Roadmap</a></li>
-      </ul>
-    </nav>
-  </div>
+  <div class="logo">KALHOR ENERGY</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#technology">Technology</a>
+    <a href="#tokenomics">Tokenomics</a>
+    <a href="#roadmap">Roadmap</a>
+  </nav>
 </header>
 
 <main>
-  <div class="hero">
-    <div class="eyebrow">INDEPENDENT • OPEN-SOURCE • DECENTRALIZED</div>
-    <h1>KALHOR <span>ENERGY</span></h1>
-    <p>
-      An independent, open-source blockchain project inspired by
-      the principles of Bitcoin and the long-term possibilities
-      of decentralized technology.
-    </p>
-    <div class="status">Early Development · Local Prototype</div>
-    <p style="margin-top:25px;font-size:14px;">
-      Project ticker: KALH
-    </p>
+<section class="hero">
+  <h1>KALHOR <span>ENERGY</span></h1>
+  <p>
+    Building an Independent Blockchain for the Future.
+    Inspired by Proof of Work, decentralization,
+    transparency and a limited digital supply.
+  </p>
+  <a class="button" href="#about">Discover the Project</a>
+  <p><strong>Native Asset Concept: KALH</strong></p>
+</section>
+
+<section id="about">
+  <h2>About KALHOR ENERGY</h2>
+  <p class="intro">
+    KALHOR ENERGY is an independent blockchain project in early
+    development. Its vision is to build a decentralized,
+    open-source digital network based on transparent rules,
+    public participation and verifiable technology.
+  </p>
+  <p class="intro">
+    The project draws inspiration from Bitcoin's core principles:
+    Proof of Work, decentralization, network security and a
+    transparently limited supply. Its long-term vision includes
+    exploring smart contracts and decentralized applications
+    after the foundational blockchain has been developed and tested.
+  </p>
+</section>
+
+<section id="technology">
+  <h2>Technology & Vision</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Proof of Work</h3>
+      <p>A mining-based consensus model designed around
+      computational work and verifiable block production.</p>
+    </div>
+    <div class="card">
+      <h3>Decentralization</h3>
+      <p>A long-term commitment to open participation,
+      transparent rules and reduced dependence on central control.</p>
+    </div>
+    <div class="card">
+      <h3>Open Source</h3>
+      <p>A development vision built around public documentation,
+      reviewable code and community participation.</p>
+    </div>
+    <div class="card">
+      <h3>Future Expansion</h3>
+      <p>Smart contracts and decentralized applications may be
+      explored after the base network reaches sufficient maturity.</p>
+    </div>
   </div>
+</section>
 
-  <section id="about">
-    <div class="container">
-      <h2>About <span>KALHOR ENERGY</span></h2>
-      <p class="intro">
-        KALHOR ENERGY is an independent blockchain initiative
-        focused on building a transparent, secure and decentralized
-        Proof-of-Work network. The project aims to begin with a
-        simple and independently mineable blockchain, prioritizing
-        security, verifiability and open-source development.
-      </p>
-      <div class="notice">
-        <strong>Current project status:</strong><br>
-        KALHOR ENERGY is in its early development stage.
-        Work completed so far is limited to a local prototype.
-        There is currently no public mainnet, operational public
-        mining network, or publicly transferable KALH asset.
-      </div>
+<section id="tokenomics">
+  <h2>KALH Tokenomics</h2>
+  <p class="intro">
+    The current proposed maximum supply is 50,000,000 KALH.
+    The following allocation represents the project's current
+    design proposal and is subject to technical and legal review.
+  </p>
+  <div class="grid">
+    <div class="card">
+      <div class="stat">10M</div>
+      <h3>Founder Allocation</h3>
+      <p>Planned gradual release over time, subject to transparent
+      release rules.</p>
     </div>
-  </section>
+    <div class="card">
+      <div class="stat">30M</div>
+      <h3>Public Mining</h3>
+      <p>Reserved for future Proof of Work mining rewards and
+      network incentives.</p>
+    </div>
+    <div class="card">
+      <div class="stat">10M</div>
+      <h3>Initial Offering</h3>
+      <p>Reserved for a possible future offering, subject to
+      legal, technical and operational readiness.</p>
+    </div>
+  </div>
+  <p class="notice">
+    Maximum proposed supply: 50,000,000 KALH.
+    No public token sale or active mainnet is currently available.
+  </p>
+</section>
 
-  <section id="technology">
-    <div class="container">
-      <h2>Technology & <span>Principles</span></h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Proof of Work</h3>
-          <p>
-            A planned consensus model inspired by Bitcoin,
-            designed around computational work and independent verification.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Decentralization</h3>
-          <p>
-            The long-term objective is an open network that
-            does not depend on a single central operator.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Open Source</h3>
-          <p>
-            Development is intended to be transparent,
-            publicly reviewable and accessible to contributors.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Future Ecosystem</h3>
-          <p>
-            Smart contracts and decentralized applications
-            may be considered only after the base blockchain
-            is developed and independently tested.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="roadmap">
+  <h2>Development Roadmap</h2>
+  <ol class="roadmap">
+    <li><strong>Phase 1 — Foundation:</strong>
+      Initial concept, project structure and local prototype.</li>
+    <li><strong>Phase 2 — Validation:</strong>
+      Strengthen blockchain logic, supply rules and security testing.</li>
+    <li><strong>Phase 3 — Public Development:</strong>
+      Publish technical documentation and invite independent review.</li>
+    <li><strong>Phase 4 — Test Network:</strong>
+      Explore a public testnet after the core implementation is ready.</li>
+    <li><strong>Phase 5 — Mainnet Research:</strong>
+      Evaluate security, decentralization and launch readiness.</li>
+    <li><strong>Phase 6 — Future Ecosystem:</strong>
+      Explore smart contracts and decentralized applications.</li>
+  </ol>
+</section>
 
-  <section id="tokenomics">
-    <div class="container">
-      <h2>Planned <span>Tokenomics</span></h2>
-      <p class="intro">
-        The current proposed maximum supply allocation is
-        50,000,000 KALH.
-      </p>
-      <table class="token-table">
-        <thead>
-          <tr>
-            <th>Allocation</th>
-            <th>Amount</th>
-            <th>Share</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Founder Allocation</td>
-            <td>10,000,000</td>
-            <td>20%</td>
-          </tr>
-          <tr>
-            <td>Public Mining</td>
-            <td>30,000,000</td>
-            <td>60%</td>
-          </tr>
-          <tr>
-            <td>Initial Offering</td>
-            <td>10,000,000</td>
-            <td>20%</td>
-          </tr>
-          <tr>
-            <th>Maximum Planned Supply</th>
-            <th>50,000,000</th>
-            <th>100%</th>
-          </tr>
-        </tbody>
-      </table>
-      <p class="note">
-        These figures describe the proposed allocation only.
-        No KALH tokens have been publicly issued or offered for sale.
-        No public mining or token sale is currently operating.
-      </p>
-    </div>
-  </section>
-
-  <section id="roadmap">
-    <div class="container">
-      <h2>Development <span>Roadmap</span></h2>
-      <div class="roadmap">
-        <div class="roadmap-item">
-          <h3>Phase 1 — Foundation</h3>
-          <p>Project architecture, principles and initial local prototype.</p>
-        </div>
-        <div class="roadmap-item">
-          <h3>Phase 2 — Core Blockchain</h3>
-          <p>Development and security testing of the core Proof-of-Work chain.</p>
-        </div>
-        <div class="roadmap-item">
-          <h3>Phase 3 — Public Testnet</h3>
-          <p>A public testing environment, subject to successful internal development and review.</p>
-        </div>
-        <div class="roadmap-item">
-          <h3>Phase 4 — Mainnet Preparation</h3>
-          <p>Independent review, security assessment and launch readiness evaluation.</p>
-        </div>
-        <div class="roadmap-item">
-          <h3>Phase 5 — Future Ecosystem</h3>
-          <p>Potential smart contracts and decentralized applications after the base network is secure and stable.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="transparency">
-    <div class="container">
-      <h2>Transparency & <span>Commitment</span></h2>
-      <p class="intro">
-        KALHOR ENERGY is being developed with an emphasis on
-        technical integrity, transparent communication and
-        realistic milestones. Development progress and project
-        status will be communicated honestly.
-      </p>
-      <div class="notice">
-        KALHOR ENERGY is an early-stage development project.
-        This website does not constitute an offer to sell
-        securities or digital assets, investment advice,
-        or a promise of future value or returns.
-      </div>
-    </div>
-  </section>
+<section>
+  <h2>Our Principle</h2>
+  <p class="intro">
+    Build carefully. Verify openly. Develop transparently.
+    Long-term trust must be earned through technology,
+    security and accountability.
+  </p>
+</section>
 </main>
 
 <footer>
-  <div class="container">
-    <p><strong>KALHOR ENERGY (KALH)</strong></p>
-    <p>Independent Open-Source Blockchain Project</p>
-    <p>© 2026 KALHOR ENERGY. Project information is subject to change.</p>
-  </div>
+  <strong>KALHOR ENERGY</strong> | KALH<br>
+  Independent Blockchain Project<br>
+  © 2026 KALHOR ENERGY. All rights reserved.<br><br>
+  Experimental project. Not financial advice.
 </footer>
 
 </body>
