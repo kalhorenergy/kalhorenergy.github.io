@@ -1,1085 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="Bbc9eb0kF9N2Dus_O8bYb9cRMlbQvl4WKpfPK-Xu3E4">
-<meta name="description" content="KALHOR ENERGY (KALH) — An independent blockchain project inspired by Proof of Work, decentralization, security and transparent digital economics.">
-<meta name="theme-color" content="#080d16">
 
-<title>KALHOR ENERGY | KALH</title>
-
-<style>
-:root {
-  --bg:#080d16;
-  --panel:#111b2b;
-  --gold:#e5b84b;
-  --text:#f3f5f8;
-  --muted:#aab5c5;
-  --line:#26354a;
-}
-
-* {
-  box-sizing:border-box;
-  scroll-behavior:smooth;
-}
-
-body {
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.7;
-}
-
-header {
-  padding:18px 8%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-  border-bottom:1px solid var(--line);
-  background:#080d16;
-  position:relative;
-  z-index:20;
-}
-
-.logo img {
-  height:58px;
-  width:auto;
-  display:block;
-  object-fit:contain;
-}
-
-.header-tools {
-  display:flex;
-  align-items:center;
-  gap:14px;
-  flex-wrap:wrap;
-  justify-content:flex-end;
-}
-
-nav {
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  gap:18px;
-}
-
-nav a {
-  color:var(--muted);
-  text-decoration:none;
-  font-size:14px;
-}
-
-nav a:hover {
-  color:var(--gold);
-}
-
-/* Language selector */
-
-.language-box {
-  position:relative;
-}
-
-.language-toggle {
-  background:var(--panel);
-  color:var(--gold);
-  border:1px solid var(--gold);
-  border-radius:6px;
-  padding:9px 13px;
-  cursor:pointer;
-  font-size:14px;
-  white-space:nowrap;
-}
-
-.language-toggle:hover {
-  background:#26354a;
-}
-
-.language-dropdown {
-  display:none;
-  position:absolute;
-  top:calc(100% + 8px);
-  right:0;
-  width:min(300px,85vw);
-  max-height:350px;
-  background:var(--panel);
-  border:1px solid var(--gold);
-  border-radius:9px;
-  padding:10px;
-  box-shadow:0 12px 30px #0009;
-  z-index:200;
-}
-
-.language-dropdown.open {
-  display:block;
-}
-
-.language-search {
-  width:100%;
-  background:#080d16;
-  color:var(--text);
-  border:1px solid var(--line);
-  border-radius:6px;
-  padding:11px;
-  outline:none;
-  font-size:14px;
-  margin-bottom:9px;
-}
-
-.language-search:focus {
-  border-color:var(--gold);
-}
-
-.language-options {
-  max-height:260px;
-  overflow-y:auto;
-}
-
-.language-option {
-  display:block;
-  width:100%;
-  text-align:left;
-  background:transparent;
-  border:0;
-  color:var(--text);
-  padding:10px;
-  border-radius:5px;
-  cursor:pointer;
-  font-size:14px;
-}
-
-.language-option:hover,
-.language-option:focus {
-  background:#26354a;
-  color:var(--gold);
-  outline:none;
-}
-
-.language-option.active {
-  color:var(--gold);
-  font-weight:bold;
-}
-
-.language-empty {
-  padding:12px;
-  color:var(--muted);
-  font-size:13px;
-}
-
-.language-status {
-  border-top:1px solid var(--line);
-  margin-top:8px;
-  padding:9px 5px 2px;
-  color:var(--muted);
-  font-size:12px;
-}
-
-/* Google Translate engine */
-
-#google_translate_element {
-  position:fixed!important;
-  left:-10000px!important;
-  top:0!important;
-  width:1px!important;
-  height:1px!important;
-  overflow:hidden!important;
-  clip-path:inset(50%)!important;
-  white-space:nowrap!important;
-  opacity:0!important;
-  pointer-events:none!important;
-  z-index:-1!important;
-}
-
-#google_translate_element select.goog-te-combo {
-  width:1px!important;
-  height:1px!important;
-}
-
-.goog-te-banner-frame,
-iframe.goog-te-banner-frame {
-  display:none!important;
-}
-
-.goog-logo-link,
-.goog-te-gadget span {
-  display:none!important;
-}
-
-body {
-  top:0!important;
-}
-
-/* Website search */
-
-.site-search-wrap {
-  position:relative;
-  min-width:230px;
-  max-width:330px;
-  width:100%;
-}
-
-.site-search {
-  width:100%;
-  background:var(--panel);
-  color:var(--text);
-  border:1px solid var(--line);
-  border-radius:6px;
-  padding:10px 38px 10px 12px;
-  font-size:14px;
-  outline:none;
-}
-
-.site-search:focus {
-  border-color:var(--gold);
-}
-
-.site-search-button {
-  position:absolute;
-  right:5px;
-  top:50%;
-  transform:translateY(-50%);
-  background:transparent;
-  border:0;
-  color:var(--gold);
-  font-size:18px;
-  cursor:pointer;
-  padding:5px;
-}
-
-.search-results {
-  display:none;
-  position:absolute;
-  top:calc(100% + 8px);
-  left:0;
-  right:0;
-  max-height:360px;
-  overflow:auto;
-  background:var(--panel);
-  border:1px solid var(--gold);
-  border-radius:8px;
-  padding:7px;
-  box-shadow:0 12px 30px #0009;
-  z-index:100;
-}
-
-.search-results.open {
-  display:block;
-}
-
-.search-result {
-  display:block;
-  padding:10px;
-  border-radius:5px;
-  color:var(--text);
-  text-decoration:none;
-  border-bottom:1px solid var(--line);
-}
-
-.search-result:last-child {
-  border-bottom:0;
-}
-
-.search-result:hover {
-  background:#26354a;
-}
-
-.search-result strong {
-  display:block;
-  color:var(--gold);
-  font-size:14px;
-}
-
-.search-result small {
-  display:block;
-  color:var(--muted);
-  font-size:12px;
-  line-height:1.5;
-  margin-top:3px;
-}
-
-.search-message {
-  padding:10px;
-  color:var(--muted);
-  font-size:13px;
-}
-
-/* Main images */
-
-.hero-image {
-  padding:25px 8%;
-  text-align:center;
-}
-
-.hero-image img {
-  width:100%;
-  max-width:1100px;
-  height:auto;
-  border-radius:16px;
-  border:1px solid var(--line);
-}
-
-/* Hero */
-
-.hero {
-  text-align:center;
-  padding:100px 20px;
-  background:radial-gradient(
-    ellipse at top,
-    #1b2b42 0%,
-    var(--bg) 70%
-  );
-}
-
-.hero h1 {
-  font-size:clamp(38px,7vw,70px);
-  margin:0;
-  letter-spacing:4px;
-}
-
-.hero h1 span {
-  color:var(--gold);
-}
-
-.hero p {
-  max-width:760px;
-  margin:24px auto;
-  color:var(--muted);
-  font-size:18px;
-}
-
-.button {
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 25px;
-  border:1px solid var(--gold);
-  color:var(--gold);
-  text-decoration:none;
-  border-radius:5px;
-  transition:.3s;
-}
-
-.button:hover {
-  background:var(--gold);
-  color:var(--bg);
-}
-
-/* Sections */
-
-section {
-  padding:75px 9%;
-  max-width:1250px;
-  margin:auto;
-}
-
-h2 {
-  font-size:32px;
-  color:var(--gold);
-  margin-top:0;
-}
-
-.intro {
-  color:var(--muted);
-  max-width:850px;
-}
-
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-  margin-top:30px;
-}
-
-.card {
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:10px;
-  padding:25px;
-}
-
-.card h3 {
-  color:var(--gold);
-  margin-top:0;
-}
-
-.card p {
-  color:var(--muted);
-}
-
-.stat {
-  font-size:30px;
-  color:var(--gold);
-  font-weight:bold;
-}
-
-.technology-image {
-  width:100%;
-  max-width:1000px;
-  height:auto;
-  display:block;
-  margin:30px auto;
-  border-radius:16px;
-  border:1px solid var(--line);
-}
-
-.coin-showcase {
-  text-align:center;
-  margin:35px auto;
-}
-
-.coin-showcase img {
-  width:100%;
-  max-width:260px;
-  height:auto;
-  object-fit:contain;
-  border-radius:12px;
-}
-
-.coin-caption {
-  color:var(--muted);
-  margin-top:12px;
-  font-size:14px;
-}
-
-.roadmap li {
-  margin:18px 0;
-  color:var(--muted);
-}
-
-.principles-image {
-  width:100%;
-  max-width:1000px;
-  display:block;
-  height:auto;
-  margin:30px auto;
-  border-radius:16px;
-  border:1px solid var(--line);
-}
-
-.security-card {
-  background:var(--panel);
-  border:1px solid var(--gold);
-  border-radius:10px;
-  padding:25px;
-  margin-top:30px;
-}
-
-.security-card h3 {
-  color:var(--gold);
-  margin-top:0;
-}
-
-.security-card p,
-.security-card li {
-  color:var(--muted);
-}
-
-.security-card ul {
-  padding-left:22px;
-}
-
-.notice {
-  background:#192337;
-  border-left:3px solid var(--gold);
-  padding:18px;
-  color:var(--muted);
-  border-radius:4px;
-  margin-top:25px;
-}
-
-.whitepaper-card {
-  background:var(--panel);
-  border:1px solid var(--gold);
-  border-radius:12px;
-  padding:35px;
-  text-align:center;
-  margin-top:30px;
-}
-
-.whitepaper-card h3 {
-  color:var(--gold);
-  font-size:24px;
-}
-
-.whitepaper-card p {
-  color:var(--muted);
-  max-width:700px;
-  margin:15px auto;
-}
-
-.whitepaper-icon {
-  font-size:48px;
-  margin-bottom:10px;
-}
-
-.whitepaper-actions {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:15px;
-  margin-top:20px;
-}
-
-.whitepaper-actions .button {
-  margin-top:0;
-}
-
-footer {
-  border-top:1px solid var(--line);
-  text-align:center;
-  padding:35px 15px;
-  color:var(--muted);
-  font-size:13px;
-}
-
-/* RTL */
-
-html[dir="rtl"] body {
-  direction:rtl;
-  text-align:right;
-}
-
-html[dir="rtl"] nav {
-  direction:rtl;
-}
-
-html[dir="rtl"] .notice {
-  border-left:none;
-  border-right:3px solid var(--gold);
-}
-
-html[dir="rtl"] .security-card ul {
-  padding-left:0;
-  padding-right:22px;
-}
-
-html[dir="rtl"] .hero,
-html[dir="rtl"] .coin-showcase,
-html[dir="rtl"] footer,
-html[dir="rtl"] .whitepaper-card {
-  text-align:center;
-}
-
-html[dir="rtl"] .language-dropdown {
-  right:auto;
-  left:0;
-}
-
-html[dir="rtl"] .language-option {
-  text-align:right;
-}
-
-html[dir="rtl"] .site-search {
-  padding:10px 12px 10px 38px;
-}
-
-html[dir="rtl"] .site-search-button {
-  right:auto;
-  left:5px;
-}
-
-/* Mobile */
-
-@media(max-width:900px) {
-  header {
-    flex-direction:column;
-    padding:18px 5%;
-  }
-
-  .header-tools {
-    justify-content:center;
-    width:100%;
-  }
-
-  .site-search-wrap {
-    max-width:420px;
-  }
-}
-
-@media(max-width:700px) {
-  nav {
-    justify-content:center;
-    gap:12px;
-  }
-
-  nav a {
-    font-size:13px;
-  }
-
-  .hero {
-    padding:70px 18px;
-  }
-
-  section {
-    padding:55px 7%;
-  }
-
-  .hero-image {
-    padding:18px 5%;
-  }
-
-  h2 {
-    font-size:27px;
-  }
-
-  .whitepaper-card {
-    padding:22px;
-  }
-
-  .header-tools {
-    gap:10px;
-  }
-
-  .site-search-wrap {
-    min-width:min(100%,280px);
-  }
-
-  .language-dropdown {
-    right:50%;
-    transform:translateX(50%);
-  }
-
-  html[dir="rtl"] .language-dropdown {
-    left:50%;
-    right:auto;
-    transform:translateX(-50%);
-  }
-}
-</style>
-</head>
-
-<body>
-
-<header>
-  <div class="logo">
-    <img src="kalhor-logo.jpg" alt="KALHOR ENERGY Official Logo">
-  </div>
-
-  <div class="header-tools">
-
-    <div class="site-search-wrap">
-      <input
-        id="siteSearch"
-        class="site-search"
-        type="search"
-        placeholder="Search this website..."
-        aria-label="Search website"
-        autocomplete="off"
-      >
-
-      <button
-        id="siteSearchButton"
-        class="site-search-button"
-        type="button"
-        aria-label="Search"
-      >⌕</button>
-
-      <div
-        id="siteSearchResults"
-        class="search-results"
-        role="listbox"
-        aria-label="Website search results"
-      ></div>
-    </div>
-
-    <nav>
-      <a href="#about">About</a>
-      <a href="#technology">Technology</a>
-      <a href="#tokenomics">Tokenomics</a>
-      <a href="#roadmap">Roadmap</a>
-      <a href="#principles">Our Principles</a>
-      <a href="#whitepaper">Whitepaper</a>
-
-      <div class="language-box">
-
-        <button
-          type="button"
-          id="languageToggle"
-          class="language-toggle"
-          aria-expanded="false"
-          aria-controls="languageDropdown"
-        >
-          🌐 Language ▾
-        </button>
-
-        <div
-          id="languageDropdown"
-          class="language-dropdown"
-        >
-          <input
-            id="languageSearch"
-            class="language-search"
-            type="search"
-            placeholder="Search language..."
-            aria-label="Search language"
-            autocomplete="off"
-          >
-
-          <div
-            id="languageOptions"
-            class="language-options"
-            role="listbox"
-          ></div>
-
-          <div
-            id="languageStatus"
-            class="language-status"
-            aria-live="polite"
-          >
-            Loading translation service...
-          </div>
-        </div>
-
-      </div>
-    </nav>
-
-  </div>
-</header>
-
-<section class="hero-image">
-  <img
-    src="file_0000000094f881f480487631af6eff83.png"
-    alt="KALHOR ENERGY Blockchain Network"
-  >
-</section>
-
-<main>
-
-<section class="hero">
-  <h1>KALHOR <span>ENERGY</span></h1>
-
-  <p>
-    Building an Independent Blockchain for the Future.
-    Inspired by Proof of Work, decentralization,
-    transparency and a limited digital supply.
-  </p>
-
-  <a class="button" href="#about">Discover the Project</a>
-
-  <p><strong>Native Asset Concept: KALH</strong></p>
-</section>
-
-<section id="about">
-  <h2>About KALHOR ENERGY</h2>
-
-  <p class="intro">
-    KALHOR ENERGY is an independent blockchain project in early
-    development. Its vision is to build a decentralized,
-    open-source digital network based on transparent rules,
-    public participation and verifiable technology.
-  </p>
-
-  <p class="intro">
-    The project draws inspiration from Bitcoin's core principles:
-    Proof of Work, decentralization, network security and a
-    transparently limited supply. Its long-term vision includes
-    exploring smart contracts and decentralized applications
-    after the foundational blockchain has been developed and tested.
-  </p>
-</section>
-
-<section id="technology">
-  <h2>Technology &amp; Vision</h2>
-
-  <p class="intro">
-    KALHOR ENERGY aims to develop an independent blockchain
-    with a secure and verifiable foundation, transparent
-    protocol rules and open-source development.
-  </p>
-
-  <img
-    class="technology-image"
-    src="KALHOR_TECHNOLOGY.png"
-    alt="KALHOR ENERGY Technology and Blockchain Vision"
-  >
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>Proof of Work</h3>
-      <p>
-        A mining-based consensus model designed around computational
-        work and verifiable block production.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Decentralization</h3>
-      <p>
-        A long-term commitment to open participation, transparent
-        rules and reduced dependence on central control.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Open Source</h3>
-      <p>
-        A development vision built around public documentation,
-        reviewable code and community participation.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Future Expansion</h3>
-      <p>
-        Smart contracts and decentralized applications may be
-        explored after the base network reaches sufficient maturity.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section id="tokenomics">
-  <h2>KALH Tokenomics</h2>
-
-  <p class="intro">
-    The current proposed maximum supply is 50,000,000 KALH.
-    The following allocation represents the project's current
-    design proposal and is subject to technical and legal review.
-  </p>
-
-  <div class="coin-showcase">
-    <img
-      src="kalh-coin.jpg"
-      alt="KALHOR ENERGY KALH Coin Design"
-    >
-
-    <p class="coin-caption">
-      KALHOR ENERGY — KALH Coin Concept
-    </p>
-  </div>
-
-  <div class="grid">
-
-    <div class="card">
-      <div class="stat">10M</div>
-      <h3>Founder Allocation</h3>
-      <p>
-        Planned gradual release over time, subject to transparent
-        release rules.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="stat">30M</div>
-      <h3>Public Mining</h3>
-      <p>
-        Reserved for future Proof of Work mining rewards
-        and network incentives.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="stat">10M</div>
-      <h3>Initial Offering</h3>
-      <p>
-        Reserved for a possible future offering, subject to legal,
-        technical and operational readiness.
-      </p>
-    </div>
-
-  </div>
-
-  <p class="notice">
-    Maximum proposed supply: 50,000,000 KALH.
-    No public token sale or active mainnet is currently available.
-  </p>
-</section>
-
-<section id="roadmap">
-  <h2>Development Roadmap</h2>
-
-  <ol class="roadmap">
-    <li>
-      <strong>Phase 1 — Foundation:</strong>
-      Initial concept, project structure and local prototype.
-    </li>
-
-    <li>
-      <strong>Phase 2 — Validation:</strong>
-      Strengthen blockchain logic, supply rules and security testing.
-    </li>
-
-    <li>
-      <strong>Phase 3 — Public Development:</strong>
-      Publish technical documentation and invite independent review.
-    </li>
-
-    <li>
-      <strong>Phase 4 — Test Network:</strong>
-      Explore a public testnet after the core implementation is ready.
-    </li>
-
-    <li>
-      <strong>Phase 5 — Mainnet Research:</strong>
-      Evaluate security, decentralization and launch readiness.
-    </li>
-
-    <li>
-      <strong>Phase 6 — Future Ecosystem:</strong>
-      Explore smart contracts and decentralized applications.
-    </li>
-  </ol>
-</section>
-
-<section id="principles">
-  <h2>Our Principles</h2>
-
-  <p class="intro">
-    Build carefully. Verify openly. Develop transparently.
-    Long-term trust must be earned through technology,
-    security and accountability.
-  </p>
-
-  <img
-    class="principles-image"
-    src="our-principles.jpg"
-    alt="KALHOR ENERGY — Our Principles"
-  >
-
-  <div class="security-card">
-    <h3>Security Before Speed</h3>
-
-    <p>
-      KALHOR ENERGY places security before rapid development
-      or launch. The long-term protection of the network
-      must come before speed.
-    </p>
-
-    <p>
-      No single person, including the founder, should have
-      unilateral authority to change critical blockchain
-      protocol rules.
-    </p>
-
-    <ul>
-      <li>
-        Critical protocol changes require independent review.
-      </li>
-
-      <li>
-        Sensitive changes must undergo testing and approval.
-      </li>
-
-      <li>
-        Supply limits and block validation rules must be protected
-        by strict verification.
-      </li>
-
-      <li>
-        Security testing, independent audits and transparent
-        development are essential.
-      </li>
-
-      <li>
-        Network monitoring and incident response planning
-        are part of the security approach.
-      </li>
-    </ul>
-
-    <p>
-      Security is an ongoing responsibility. No software
-      or blockchain system can honestly be guaranteed
-      to be completely immune to attacks.
-    </p>
-  </div>
-</section>
-
-<section id="whitepaper">
-  <h2>Official Whitepaper</h2>
-
-  <p class="intro">
-    Explore the vision, principles, proposed architecture,
-    economic model, security approach and development roadmap
-    of KALHOR ENERGY.
-  </p>
-
-  <div class="whitepaper-card">
-
-    <div class="whitepaper-icon">📄</div>
-
-    <h3>KALHOR ENERGY — KALH Whitepaper</h3>
-
-    <p>
-      The official English documentation of the independent
-      KALHOR ENERGY blockchain project.
-    </p>
-
-    <p>
-      The English edition is the primary reference for the
-      project's technical and economic documentation.
-    </p>
-
-    <div class="whitepaper-actions">
-      <a class="button" href="whitepaper.html">
-        Read Whitepaper
-      </a>
-    </div>
-
-    <p class="language-note">
-      Additional language editions may be published as
-      translations are prepared and reviewed.
-    </p>
-
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <strong>KALHOR ENERGY</strong> | KALH
-
-  <br>Independent Blockchain Project
-
-  <br>© 2026 KALHOR ENERGY. All rights reserved.
-
-  <br><br>Experimental project. Not financial advice.
-
-  <br><br>
-
-  <a
-    href="whitepaper.html"
-    style="color:#e5b84b;text-decoration:none;"
-  >
-    Official Whitepaper
-  </a>
-</footer>
-
-<!-- Google Translate host: moved outside the header and navigation -->
-<div id="google_translate_element"></div>
-
-<!-- Google Translate initialization -->
-<script>
-function googleTranslateElementInit() {
-  if (
-    !window.google ||
-    !google.translate ||
-    !google.translate.TranslateElement
-  ) {
-    return;
-  }
-
-  new google.translate.TranslateElement(
-    {
-      pageLanguage:'en',
-      autoDisplay:false,
-      layout:google.translate.TranslateElement.InlineLayout.SIMPLE
-    },
-    'google_translate_element'
-  );
-}
-</script>
-
-<script
-  type="text/javascript"
-  src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-  async
-></script>
-
-<!-- Language selector, search and language persistence -->
-<script>
 (function() {
   "use strict";
 
@@ -1088,79 +7,53 @@ function googleTranslateElementInit() {
   const search = document.getElementById("languageSearch");
   const optionsBox = document.getElementById("languageOptions");
   const status = document.getElementById("languageStatus");
-  const translateHost = document.getElementById("google_translate_element");
+  const host = document.getElementById("google_translate_element");
 
   const rtlLanguages = [
     "ar","arc","az","ckb","dv","fa","he","ku",
     "nqo","ps","sd","ug","ur","yi"
   ];
 
-  let languageList = [];
-  let selectedLanguage = "en";
-  let initialized = false;
-
-  function getCookie(name) {
-    const match = document.cookie.match(
-      new RegExp("(?:^|;\\s*)" + name + "=([^;]*)")
-    );
-
-    return match ? decodeURIComponent(match[1]) : null;
-  }
+  let languages = [];
+  let selected = "en";
+  let timer = null;
 
   function getSavedLanguage() {
-    const value = getCookie("googtrans");
+    const match = document.cookie.match(
+      /(?:^|;\s*)googtrans=([^;]+)/
+    );
 
-    if (!value) return "en";
+    if (!match) return "en";
 
-    const parts = value.split("/");
-
-    if (parts.length >= 3 && parts[2]) {
-      return parts[2];
+    try {
+      const parts = decodeURIComponent(match[1]).split("/");
+      return parts.length >= 3 ? parts[2] || "en" : "en";
+    } catch(e) {
+      return "en";
     }
-
-    return "en";
   }
 
-  function saveLanguage(language) {
-    if (language === "en") {
+  function saveLanguage(code) {
+    if (code === "en") {
       document.cookie =
-        "googtrans=; path=/; max-age=0; SameSite=Lax";
-
-      return;
+        "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; SameSite=Lax";
+    } else {
+      document.cookie =
+        "googtrans=" + encodeURIComponent("/en/" + code) +
+        "; path=/; max-age=31536000; SameSite=Lax";
     }
-
-    const value = encodeURIComponent("/en/" + language);
-
-    document.cookie =
-      "googtrans=" + value +
-      "; path=/; max-age=31536000; SameSite=Lax";
   }
 
-  function updateDirection(language) {
-    const code = (language || "en")
-      .toLowerCase()
-      .split("-")[0];
+  function updateDirection(code) {
+    const lang = (code || "en").toLowerCase().split("-")[0];
 
     document.documentElement.dir =
-      rtlLanguages.includes(code) ? "rtl" : "ltr";
+      rtlLanguages.includes(lang) ? "rtl" : "ltr";
   }
 
-  function findGoogleSelect() {
-    return (
-        translateHost.querySelector("select.goog-te-combo") ||
-        document.querySelector("select.goog-te-combo")
-    );
-}
-
-  function closeMenu() {
-    dropdown.classList.remove("open");
-    toggle.setAttribute("aria-expanded","false");
-  }
-
-  function openMenu() {
-    dropdown.classList.add("open");
-    toggle.setAttribute("aria-expanded","true");
-    search.focus();
+  function getGoogleSelect() {
+    return host.querySelector("select.goog-te-combo") ||
+      document.querySelector("select.goog-te-combo");
   }
 
   function setStatus(message) {
@@ -1172,12 +65,10 @@ function googleTranslateElementInit() {
 
     const term = (query || "").trim().toLowerCase();
 
-    const filtered = languageList.filter(function(language) {
-      return (
-        language.name.toLowerCase().includes(term) ||
-        language.code.toLowerCase().includes(term)
-      );
-    });
+    const filtered = languages.filter(item =>
+      item.name.toLowerCase().includes(term) ||
+      item.code.toLowerCase().includes(term)
+    );
 
     if (!filtered.length) {
       const empty = document.createElement("div");
@@ -1187,166 +78,152 @@ function googleTranslateElementInit() {
       return;
     }
 
-    filtered.forEach(function(language) {
+    filtered.forEach(item => {
       const button = document.createElement("button");
 
       button.type = "button";
       button.className = "language-option";
-      button.textContent = language.name;
-      button.setAttribute("role","option");
+      button.textContent = item.name;
 
-      if (language.code === selectedLanguage) {
+      if (item.code === selected) {
         button.classList.add("active");
-        button.setAttribute("aria-selected","true");
+        button.setAttribute("aria-selected", "true");
       }
 
-      button.addEventListener("click",function() {
-        selectLanguage(language.code);
+      button.addEventListener("click", () => {
+        selectLanguage(item.code);
       });
 
       optionsBox.appendChild(button);
     });
   }
 
-  function loadLanguagesFromGoogle() {
-    const select = findGoogleSelect();
+  function loadLanguages() {
+    const select = getGoogleSelect();
 
-    if (!select || !select.options.length) {
-      return false;
-    }
+    if (!select || !select.options.length) return false;
 
     const found = [];
 
-    Array.from(select.options).forEach(function(option) {
+    Array.from(select.options).forEach(option => {
       const code = option.value;
       const name = option.textContent.trim();
 
-      if (!code || !name) return;
+      if (!name) return;
 
-      if (code === "en") return;
-
-      if (!found.some(function(item) {
-        return item.code === code;
-      })) {
+      if (!found.some(item => item.code === code)) {
         found.push({
-          code:code,
-          name:name
+          code: code || "en",
+          name: code ? name : "English (Original)"
         });
       }
     });
 
     if (!found.length) return false;
 
-    languageList = found;
+    languages = found;
 
-    // English is the original page language.
-    languageList.unshift({
-      code:"en",
-      name:"English (Original)"
-    });
+    selected = getSavedLanguage();
 
-    selectedLanguage = getSavedLanguage();
-
-    updateDirection(selectedLanguage);
-
-    renderLanguages(search.value);
-
-    setStatus(
-      languageList.length + " available language options"
-    );
-
-    if (selectedLanguage !== "en") {
-      const saved = languageList.find(function(item) {
-        return item.code === selectedLanguage;
-      });
-
-      if (saved) {
-        toggle.textContent = "🌐 " + saved.name + " ▾";
-      }
+    if (!languages.some(item => item.code === selected)) {
+      selected = "en";
     }
 
-    initialized = true;
+    updateDirection(selected);
+    renderLanguages(search.value);
+
+    const current = languages.find(item => item.code === selected);
+
+    toggle.textContent =
+      "🌐 " + (current ? current.name : "Language") + " ▾";
+
+    setStatus(languages.length + " available language options");
 
     return true;
   }
 
   function selectLanguage(code) {
-    const select = findGoogleSelect();
+    const select = getGoogleSelect();
 
     if (!select) {
-      setStatus(
-        "Google Translate is not ready. Please try again."
-      );
+      setStatus("Google Translate is not ready. Please try again.");
+      startLoading();
       return;
     }
 
-    if (code === "en") {
-      saveLanguage("en");
-
-      select.value = "";
-
-      select.dispatchEvent(
-        new Event("change",{bubbles:true})
-      );
-
-      selectedLanguage = "en";
-
-      toggle.textContent = "🌐 Language ▾";
-
-      updateDirection("en");
-
-      renderLanguages(search.value);
-
-      setStatus("Original English language selected.");
-
-      closeMenu();
-
-      return;
-    }
+    const googleCode = code === "en" ? "" : code;
 
     const available = Array.from(select.options).some(
-      function(option) {
-        return option.value === code;
-      }
+      option => option.value === googleCode
     );
 
     if (!available) {
-      setStatus(
-        "This language is not currently available from Google Translate."
-      );
+      setStatus("This language is not currently available.");
       return;
     }
 
-    selectedLanguage = code;
+    selected = code;
 
     saveLanguage(code);
-
     updateDirection(code);
 
-    select.value = code;
+    select.value = googleCode;
 
     select.dispatchEvent(
-      new Event("change",{bubbles:true})
+      new Event("change", { bubbles: true })
     );
-
-    const language = languageList.find(
-      function(item) {
-        return item.code === code;
-      }
-    );
-
-    if (language) {
-      toggle.textContent = "🌐 " + language.name + " ▾";
-    }
 
     renderLanguages(search.value);
+
+    const current = languages.find(item => item.code === code);
+
+    toggle.textContent =
+      "🌐 " + (current ? current.name : "Language") + " ▾";
 
     setStatus("Language selected.");
 
     closeMenu();
   }
 
-  toggle.addEventListener("click",function(event) {
+  function openMenu() {
+    dropdown.classList.add("open");
+    toggle.setAttribute("aria-expanded", "true");
+
+    if (!loadLanguages()) {
+      setStatus("Loading available languages...");
+      startLoading();
+    }
+
+    search.focus();
+  }
+
+  function closeMenu() {
+    dropdown.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+  }
+
+  function startLoading() {
+    if (timer) return;
+
+    let attempts = 0;
+
+    timer = setInterval(() => {
+      attempts++;
+
+      if (loadLanguages() || attempts >= 40) {
+        clearInterval(timer);
+        timer = null;
+
+        if (!languages.length) {
+          setStatus(
+            "Google Translate could not be loaded. Check your connection."
+          );
+        }
+      }
+    }, 500);
+  }
+
+  toggle.addEventListener("click", event => {
     event.stopPropagation();
 
     if (dropdown.classList.contains("open")) {
@@ -1356,302 +233,48 @@ function googleTranslateElementInit() {
     }
   });
 
-  search.addEventListener("input",function() {
+  search.addEventListener("input", () => {
     renderLanguages(search.value);
   });
 
-  search.addEventListener("keydown",function(event) {
+  search.addEventListener("keydown", event => {
     if (event.key === "Escape") {
       closeMenu();
       toggle.focus();
     }
 
     if (event.key === "Enter") {
-      const first = optionsBox.querySelector(
-        ".language-option"
-      );
-
+      const first = optionsBox.querySelector(".language-option");
       if (first) first.click();
     }
   });
 
-  document.addEventListener("click",function(event) {
+  document.addEventListener("click", event => {
     if (!event.target.closest(".language-box")) {
       closeMenu();
     }
   });
 
-  document.addEventListener("keydown",function(event) {
-    if (event.key === "Escape") {
-      closeMenu();
-    }
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") closeMenu();
   });
 
-  // Apply saved direction as early as possible.
   updateDirection(getSavedLanguage());
 
-  // Wait for the real Google Translate language list.
-  let attempts = 0;
-
-  const timer = setInterval(function() {
-    attempts++;
-
-    if (loadLanguagesFromGoogle()) {
-      clearInterval(timer);
-
-      const saved = getSavedLanguage();
-
-      if (saved !== "en") {
-        const select = findGoogleSelect();
-
-        if (select) {
-          const exists = Array.from(select.options).some(
-            function(option) {
-              return option.value === saved;
-            }
-          );
-
-          if (exists) {
-            select.value = saved;
-
-            select.dispatchEvent(
-              new Event("change",{bubbles:true})
-            );
-          }
-        }
+  const observer = new MutationObserver(() => {
+    if (loadLanguages()) {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
       }
-
-      return;
-    }
-
-    if (attempts >= 40) {
-      clearInterval(timer);
-
-      setStatus(
-        "Google Translate could not be loaded. Check your internet connection."
-      );
-    }
-  },500);
-
-  // Observe the widget in case Google creates its select later.
-  const observer = new MutationObserver(function() {
-    if (!initialized) {
-      loadLanguagesFromGoogle();
     }
   });
 
-  observer.observe(translateHost,{
-    childList:true,
-    subtree:true
+  observer.observe(host, {
+    childList: true,
+    subtree: true
   });
+
+  startLoading();
 
 })();
-</script>
-
-<!-- RTL direction synchronization -->
-<script>
-(function() {
-  const rtlLanguages = [
-    "ar","arc","az","ckb","dv","fa","he","ku",
-    "nqo","ps","sd","ug","ur","yi"
-  ];
-
-  function updateDirection() {
-    const saved = (function() {
-      const match = document.cookie.match(
-        /(?:^|;\s*)googtrans=([^;]+)/
-      );
-
-      if (!match) return "";
-
-      try {
-        const parts = decodeURIComponent(match[1]).split("/");
-        return parts.length >= 3 ? parts[2] : "";
-      } catch (error) {
-        return "";
-      }
-    })();
-
-    const lang = (
-      saved ||
-      document.documentElement.lang ||
-      "en"
-    ).toLowerCase().split("-")[0];
-
-    document.documentElement.dir =
-      rtlLanguages.includes(lang) ? "rtl" : "ltr";
-  }
-
-  updateDirection();
-
-  new MutationObserver(updateDirection).observe(
-    document.documentElement,
-    {
-      attributes:true,
-      attributeFilter:["lang"]
-    }
-  );
-})();
-</script>
-
-<!-- Website content search -->
-<script>
-(function() {
-  const input = document.getElementById("siteSearch");
-  const resultsBox = document.getElementById("siteSearchResults");
-  const button = document.getElementById("siteSearchButton");
-
-  let searchItems = [];
-  let whitepaperLoaded = false;
-
-  function clean(text) {
-    return (text || "").replace(/\s+/g," ").trim();
-  }
-
-  function collectPage(doc,base) {
-    const nodes = doc.querySelectorAll("h1,h2,h3,p,li");
-
-    nodes.forEach(function(node,index) {
-      const text = clean(node.textContent);
-
-      if (!text || text.length < 3) return;
-
-      const section = node.closest("section[id]");
-
-      let href = base + (
-        section ? "#" + section.id : ""
-      );
-
-      if (node.id) {
-        href = base + "#" + node.id;
-      }
-
-      const heading = node.closest("section")
-        ? node.closest("section").querySelector("h2")
-        : null;
-
-      searchItems.push({
-        title:clean(
-          heading ? heading.textContent : node.textContent
-        ).slice(0,90),
-
-        text:text,
-
-        href:href,
-
-        key:base + "-" + index
-      });
-    });
-  }
-
-  function buildIndex() {
-    searchItems = [];
-
-    collectPage(document,"");
-
-    if (!whitepaperLoaded) {
-      whitepaperLoaded = true;
-
-      fetch("whitepaper.html")
-        .then(function(response) {
-          if (!response.ok) {
-            throw new Error("Whitepaper unavailable");
-          }
-
-          return response.text();
-        })
-        .then(function(markup) {
-          const doc = new DOMParser().parseFromString(
-            markup,
-            "text/html"
-          );
-
-          collectPage(doc,"whitepaper.html");
-        })
-        .catch(function() {
-          // Main-page search remains available if whitepaper cannot load.
-        });
-    }
-  }
-
-  function showResults() {
-    const query = clean(input.value).toLowerCase();
-
-    resultsBox.replaceChildren();
-
-    if (!query) {
-      resultsBox.classList.remove("open");
-      return;
-    }
-
-    const matches = searchItems.filter(function(item) {
-      return (
-        item.title + " " + item.text
-      ).toLowerCase().includes(query);
-    }).slice(0,12);
-
-    if (!matches.length) {
-      const message = document.createElement("div");
-
-      message.className = "search-message";
-      message.textContent = "No matching content found.";
-
-      resultsBox.appendChild(message);
-    } else {
-      matches.forEach(function(item) {
-        const link = document.createElement("a");
-
-        link.className = "search-result";
-        link.href = item.href;
-
-        const title = document.createElement("strong");
-        title.textContent = item.title;
-
-        const description = document.createElement("small");
-
-        description.textContent =
-          item.text.slice(0,180) +
-          (item.text.length > 180 ? "…" : "");
-
-        link.append(title,description);
-
-        resultsBox.appendChild(link);
-      });
-    }
-
-    resultsBox.classList.add("open");
-  }
-
-  buildIndex();
-
-  input.addEventListener("input",showResults);
-
-  button.addEventListener("click",showResults);
-
-  document.addEventListener("click",function(event) {
-    if (!event.target.closest(".site-search-wrap")) {
-      resultsBox.classList.remove("open");
-    }
-  });
-
-  input.addEventListener("keydown",function(event) {
-    if (event.key === "Escape") {
-      resultsBox.classList.remove("open");
-    }
-
-    if (event.key === "Enter") {
-      showResults();
-
-      const first = resultsBox.querySelector("a");
-
-      if (first) {
-        location.href = first.href;
-      }
-    }
-  });
-
-})();
-</script>
-
-</body>
-</html>
