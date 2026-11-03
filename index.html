@@ -1146,8 +1146,11 @@ function googleTranslateElementInit() {
   }
 
   function findGoogleSelect() {
-    return translateHost.querySelector("select.goog-te-combo");
-  }
+    return (
+        translateHost.querySelector("select.goog-te-combo") ||
+        document.querySelector("select.goog-te-combo")
+    );
+}
 
   function closeMenu() {
     dropdown.classList.remove("open");
