@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="KALHOR ENERGY (KALH) Whitepaper — working draft of the project's vision, proposed design, tokenomics, security principles and roadmap.">
+<meta name="theme-color" content="#080d16">
+<title>KALHOR ENERGY | KALH Whitepaper</title>
+<style>
+:root{--bg:#080d16;--panel:#111b2b;--gold:#e5b84b;--text:#f3f5f8;--muted:#aab5c5;--line:#26354a}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.75}
+header{padding:18px 8%;display:flex;justify-content:space-between;align-items:center;gap:20px;border-bottom:1px solid var(--line);background:#080d16}
+.logo img{height:55px;width:auto;display:block;object-fit:contain}
+nav{display:flex;align-items:center;flex-wrap:wrap;gap:18px}
+nav a{color:var(--muted);text-decoration:none;font-size:14px}
+nav a:hover{color:var(--gold)}
+#google_translate_element{min-width:130px}
+.goog-te-gadget{color:var(--muted)!important;font-size:12px!important}
+.goog-te-gadget select{background:var(--panel);color:var(--gold);border:1px solid var(--gold);border-radius:5px;padding:7px;max-width:180px}
+.goog-logo-link,.goog-te-gadget span{display:none!important}
+.goog-te-banner-frame{display:none!important}
+body{top:0!important}
+.hero{text-align:center;padding:75px 20px;background:radial-gradient(ellipse at top,#1b2b42 0%,var(--bg) 70%)}
+.hero h1{font-size:clamp(32px,6vw,58px);letter-spacing:3px;margin:0}
+.hero h1 span{color:var(--gold)}
+.hero p{max-width:780px;margin:18px auto;color:var(--muted)}
+.status{display:inline-block;border:1px solid var(--gold);border-radius:5px;padding:6px 13px;color:var(--gold);font-size:13px;margin-top:15px}
+main{max-width:1100px;margin:auto;padding:25px 8% 75px}
+section{padding:28px 0;border-bottom:1px solid var(--line);scroll-margin-top:20px}
+h2{color:var(--gold);font-size:27px;margin:0 0 14px}
+h3{color:var(--gold);font-size:19px;margin:22px 0 8px}
+p,li{color:var(--muted)}
+strong{color:var(--text)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:22px;margin:18px 0}
+.notice{background:#192337;border-left:3px solid var(--gold);padding:17px 20px;border-radius:4px;margin:20px 0;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--panel)}
+th,td{padding:13px;text-align:left;border:1px solid var(--line);color:var(--muted)}
+th{color:var(--gold)}
+.toc a{color:var(--gold);text-decoration:none}
+.button{display:inline-block;margin-top:12px;padding:11px 22px;border:1px solid var(--gold);color:var(--gold);text-decoration:none;border-radius:5px}
+.button:hover{background:var(--gold);color:var(--bg)}
+footer{border-top:1px solid var(--line);text-align:center;padding:30px 15px;color:var(--muted);font-size:13px}
+html[dir="rtl"] body{direction:rtl;text-align:right}
+html[dir="rtl"] .notice{border-left:0;border-right:3px solid var(--gold)}
+html[dir="rtl"] th,html[dir="rtl"] td{text-align:right}
+@media(max-width:700px){header{flex-direction:column;padding:18px 5%}nav{justify-content:center;gap:12px}main{padding:15px 6% 55px}.hero{padding:55px 16px}h2{font-size:24px}table{font-size:13px}th,td{padding:8px}}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="index.html" aria-label="KALHOR ENERGY home">
+    <img src="kalhor-logo.jpg" alt="KALHOR ENERGY Official Logo">
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#abstract">Abstract</a>
+    <a href="#technology">Technology</a>
+    <a href="#tokenomics">Tokenomics</a>
+    <a href="#roadmap">Roadmap</a>
+    <div id="google_translate_element"></div>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>KALHOR <span>ENERGY</span></h1>
+  <p>Independent Blockchain Project — KALH</p>
+  <div class="status">WORKING DRAFT — UNDER DEVELOPMENT</div>
+  <p>Whitepaper working draft | Version 0.1 | November 2026</p>
+  <a class="button" href="index.html">Return to Main Website</a>
+</div>
+
+<main>
+  <div class="notice">
+    <strong>Important status notice:</strong> This document describes a project vision and proposed design. KALHOR ENERGY is in early development. The work completed so far is a local prototype; there is currently no publicly operating mainnet, live token, public token sale, or deployed production network. Proposals in this document may change after technical, security, community and legal review. This draft is not an investment offer or a promise of future performance.
+  </div>
+
+  <section class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#abstract">Abstract</a></li>
+      <li><a href="#vision">Vision and Mission</a></li>
+      <li><a href="#principles">Design Principles</a></li>
+      <li><a href="#technology">Proposed Technology</a></li>
+      <li><a href="#security">Security and Governance</a></li>
+      <li><a href="#tokenomics">Proposed Tokenomics</a></li>
+      <li><a href="#development">Development Status</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#risks">Risks and Limitations</a></li>
+      <li><a href="#disclaimer">Disclaimer</a></li>
+    </ol>
+  </section>
+
+  <section id="abstract">
+    <h2>1. Abstract</h2>
+    <p>KALHOR ENERGY (KALH) is an independent, open-source blockchain project in early development. Its initial direction is to investigate and build a standalone blockchain using Proof of Work (PoW), public verifiability, transparent protocol rules and a proposed limited supply.</p>
+    <p>The project takes inspiration from foundational ideas associated with Bitcoin, including mining-based consensus, decentralization and verifiable issuance. Its longer-term vision may include smart contracts and decentralized applications, but only after the base blockchain has been implemented, tested and assessed for security and reliability.</p>
+    <p>This whitepaper is a working description of the current vision and design proposals. It does not claim that the proposed network or features are already live.</p>
+  </section>
+
+  <section id="vision">
+    <h2>2. Vision and Mission</h2>
+    <h3>Vision</h3>
+    <p>To develop an independent digital network whose rules can be examined, whose operation can be verified, and whose long-term direction is guided by security, transparency and open participation.</p>
+    <h3>Mission</h3>
+    <ul>
+      <li>Develop a standalone blockchain foundation before pursuing additional complexity.</li>
+      <li>Make source code and technical documentation available for public examination as the project matures.</li>
+      <li>Design clear issuance and validation rules that can be independently checked.</li>
+      <li>Encourage broad participation and reduce reliance on unilateral control.</li>
+      <li>Consider future ecosystem features only when the underlying network is sufficiently mature.</li>
+    </ul>
+  </section>
+
+  <section id="principles">
+    <h2>3. Design Principles</h2>
+    <div class="card">
+      <h3>Security Before Speed</h3>
+      <p>Security and correctness take priority over rapid deployment. Testing, independent review and careful change management should precede any public network launch.</p>
+    </div>
+    <div class="card">
+      <h3>Verifiability and Transparency</h3>
+      <p>Core rules, supply accounting and block validation should be documented so that independent developers and participants can inspect and verify them.</p>
+    </div>
+    <div class="card">
+      <h3>Open Development</h3>
+      <p>The project aims to follow an open-source development model, with public documentation and reviewable implementation as the codebase becomes ready for publication.</p>
+    </div>
+    <div class="card">
+      <h3>Decentralization</h3>
+      <p>The long-term design should support open participation and avoid giving any single individual unilateral authority over critical consensus or monetary rules.</p>
+    </div>
+  </section>
+
+  <section id="technology">
+    <h2>4. Proposed Technology</h2>
+    <h3>4.1 Standalone Proof of Work Blockchain</h3>
+    <p>The first technical objective is a native blockchain rather than an asset issued on another network. The proposed consensus direction is Proof of Work, in which miners perform computational work to propose blocks and network participants verify blocks according to common protocol rules.</p>
+    <h3>4.2 Block Validation</h3>
+    <p>The implementation is expected to define verifiable block structure, cryptographic hash links, proof-of-work requirements, transaction validation and supply constraints. Exact algorithms, parameters and network specifications remain subject to implementation and independent technical review.</p>
+    <h3>4.3 Mining and Issuance</h3>
+    <p>Public mining is proposed as the primary mechanism for distributing the mining allocation. Block rewards, transaction fees, difficulty adjustment, block timing and any reward schedule must be specified precisely in the technical protocol before a public test network or mainnet is considered.</p>
+    <h3>4.4 Future Smart Contracts</h3>
+    <p>Smart contracts and decentralized applications are a possible later-stage direction. They are not represented as existing features. Any such expansion should be considered only after the base chain has demonstrated sufficient security, stability and maintainability.</p>
+    <div class="notice">Technical note: This draft does not specify a finalized consensus algorithm, cryptographic parameter set, network protocol, wallet implementation or production mining software. Those details require further engineering and review.</div>
+  </section>
+
+  <section id="security">
+    <h2>5. Security and Governance</h2>
+    <p>Security is an ongoing engineering responsibility, not a one-time claim. The project intends to use layered validation, adversarial testing, clear release procedures and independent review as development progresses.</p>
+    <ul>
+      <li>Critical protocol changes should be documented, tested and independently reviewed.</li>
+      <li>Supply limits and issuance rules should be enforced by verifiable protocol logic.</li>
+      <li>Changes affecting consensus should not depend on the unilateral decision of one person.</li>
+      <li>Security testing and, when feasible, independent audits should precede production deployment.</li>
+      <li>Known vulnerabilities, incidents and material protocol changes should be communicated transparently.</li>
+    </ul>
+    <p>No blockchain, software implementation or cryptographic system can honestly be guaranteed to be completely immune to attack, bugs, economic manipulation or operational failure.</p>
+  </section>
+
+  <section id="tokenomics">
+    <h2>6. Proposed Tokenomics</h2>
+    <p>The current proposed maximum supply is <strong>50,000,000 KALH</strong>. The allocation below is a design proposal and remains subject to technical, economic and legal review. It is not evidence that these units have been issued or are currently available.</p>
+    <table>
+      <thead><tr><th>Allocation</th><th>Proposed Amount</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Founder Allocation</td><td>10,000,000 KALH</td><td>Proposed gradual founder allocation release.</td></tr>
+        <tr><td>Public Mining</td><td>30,000,000 KALH</td><td>Proposed Proof of Work mining rewards and network incentives.</td></tr>
+        <tr><td>Initial Offering</td><td>10,000,000 KALH</td><td>Reserved for a possible future offering, subject to readiness and applicable law.</td></tr>
+        <tr><th>Total Maximum Supply</th><th>50,000,000 KALH</th><th>Proposed maximum</th></tr>
+      </tbody>
+    </table>
+    <h3>6.1 Founder Allocation Release Proposal</h3>
+    <p>The current proposal is to release the 10,000,000 KALH founder allocation gradually over ten years, with no more than 1,000,000 KALH allocated for release in any one year. The intended monthly release is approximately 83,333.33 KALH, with the final installment adjusted so that the total does not exceed 10,000,000 KALH. The final schedule and enforcement method must be defined and reviewed before implementation.</p>
+    <h3>6.2 Public Mining Allocation</h3>
+    <p>The 30,000,000 KALH mining allocation is proposed for distribution through future protocol-defined mining rewards. Reward amounts, emission schedule, block interval, halving rules and fee treatment have not yet been finalized in a production protocol.</p>
+    <h3>6.3 Initial Offering Allocation</h3>
+    <p>The 10,000,000 KALH initial offering allocation is reserved for a possible future offering. Any offering would require separate legal, operational, technical and compliance review. No public sale is currently available.</p>
+    <div class="notice"><strong>Supply status:</strong> The allocation figures above describe the current proposal only. No public mainnet issuance or public token distribution is currently active.</div>
+  </section>
+
+  <section id="development">
+    <h2>7. Development Status</h2>
+    <p>KALHOR ENERGY is in an early prototype stage. Work to date has focused on local experimentation with blockchain structure, proof-of-work validation, hash and link checks, and supply-ledger validation. A local prototype is not equivalent to a secure, decentralized public network.</p>
+    <p>The project has not announced a production mainnet launch. There is currently no active public network, deployed production token, public token sale or operational exchange listing.</p>
+  </section>
+
+  <section id="roadmap">
+    <h2>8. Development Roadmap</h2>
+    <ol>
+      <li><strong>Foundation:</strong> Define the project scope, architecture and local prototype.</li>
+      <li><strong>Validation:</strong> Improve block validation, supply accounting and adversarial testing.</li>
+      <li><strong>Public Development:</strong> Publish source code and technical documentation when ready for meaningful public review.</li>
+      <li><strong>Test Network Research:</strong> Evaluate a public testnet only after core implementation and operational safeguards are prepared.</li>
+      <li><strong>Mainnet Readiness Assessment:</strong> Review security, decentralization, economics, infrastructure and legal requirements before any launch decision.</li>
+      <li><strong>Future Ecosystem Research:</strong> Consider smart contracts and decentralized applications only after the base network has reached sufficient maturity.</li>
+    </ol>
+    <p>These are development objectives, not guaranteed delivery dates or promises that any phase will necessarily be completed.</p>
+  </section>
+
+  <section id="risks">
+    <h2>9. Risks and Limitations</h2>
+    <p>Blockchain development involves substantial technical, economic, operational and regulatory uncertainty. Potential risks include software defects, consensus attacks, mining concentration, network outages, cryptographic weaknesses, unexpected economic behavior, loss of private keys, legal restrictions and insufficient adoption or development resources.</p>
+    <p>Proof of Work systems may also require significant energy and hardware resources. The project's proposed relationship to energy and mining does not establish that mining will be profitable, environmentally beneficial or commercially viable.</p>
+    <p>Prospective users and contributors should independently assess risks and should not rely on this draft as financial, legal, tax or investment advice.</p>
+  </section>
+
+  <section id="disclaimer">
+    <h2>10. Disclaimer</h2>
+    <p>This document is a preliminary project description for informational and discussion purposes. It is not an offer to sell, or a solicitation to buy, any security, token or financial product. No token sale, investment return, exchange listing, network launch or future functionality is promised.</p>
+    <p>All technical parameters, supply arrangements, governance mechanisms and launch plans may be revised after further engineering, security, economic and legal review. Any future release or offering will be subject to applicable laws and the availability of a sufficiently reviewed implementation.</p>
+    <p><strong>Document status:</strong> Working draft — under development. The English text is the primary reference draft. Machine translations may contain errors and should not be treated as authoritative technical or legal translations.</p>
+  </section>
+
+  <p style="text-align:center;margin-top:35px">
+    <a class="button" href="index.html">Back to KALHOR ENERGY Website</a>
+  </p>
+</main>
+
+<footer>
+  <strong>KALHOR ENERGY</strong> | KALH<br>
+  Independent Blockchain Project<br>
+  Whitepaper Working Draft — Version 0.1<br>
+  © 2026 KALHOR ENERGY. All rights reserved.
+</footer>
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {pageLanguage:'en', autoDisplay:false},
+    'google_translate_element'
+  );
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+(function(){
+  const rtl=['fa','ar','ur','ps','sd','ug','yi','he'];
+  function setDirection(){
+    const lang=(document.documentElement.lang||'en').toLowerCase().split('-')[0];
+    document.documentElement.dir=rtl.includes(lang)?'rtl':'ltr';
+  }
+  new MutationObserver(setDirection).observe(document.documentElement,{
+    attributes:true,attributeFilter:['lang']
+  });
+  setDirection();
+})();
+</script>
+</body>
+</html>
