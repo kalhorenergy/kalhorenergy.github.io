@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +7,8 @@
 <meta name="google-site-verification" content="Bbc9eb0kF9N2Dus_O8bYb9cRMlbQvl4WKpfPK-Xu3E4">
 
 <meta name="description" content="KALHOR ENERGY (KALH) — An independent blockchain project inspired by Proof of Work, decentralization, security and transparent digital economics.">
+
+<meta name="theme-color" content="#080d16">
 
 <title>KALHOR ENERGY | KALH</title>
 
@@ -54,6 +55,7 @@ header {
 nav {
   display:flex;
   flex-wrap:wrap;
+  align-items:center;
   gap:18px;
 }
 
@@ -67,6 +69,58 @@ nav a:hover {
   color:var(--gold);
 }
 
+/* Global language selector */
+
+.language-box {
+  display:flex;
+  align-items:center;
+  gap:7px;
+  background:var(--panel);
+  border:1px solid var(--gold);
+  border-radius:6px;
+  padding:5px 9px;
+}
+
+.language-box span {
+  color:var(--gold);
+  font-size:17px;
+}
+
+#google_translate_element {
+  min-width:120px;
+}
+
+.goog-te-gadget {
+  color:var(--muted)!important;
+  font-size:12px!important;
+}
+
+.goog-te-gadget select {
+  background:var(--panel);
+  color:var(--gold);
+  border:0;
+  padding:7px;
+  font-size:13px;
+  outline:none;
+  max-width:170px;
+  cursor:pointer;
+}
+
+.goog-logo-link,
+.goog-te-gadget span {
+  display:none!important;
+}
+
+.goog-te-banner-frame {
+  display:none!important;
+}
+
+body {
+  top:0!important;
+}
+
+/* Main images */
+
 .hero-image {
   padding:25px 8%;
   text-align:center;
@@ -79,6 +133,8 @@ nav a:hover {
   border-radius:16px;
   border:1px solid var(--line);
 }
+
+/* Hero */
 
 .hero {
   text-align:center;
@@ -115,12 +171,15 @@ nav a:hover {
   color:var(--gold);
   text-decoration:none;
   border-radius:5px;
+  transition:0.3s;
 }
 
 .button:hover {
   background:var(--gold);
   color:var(--bg);
 }
+
+/* Sections */
 
 section {
   padding:75px 9%;
@@ -172,6 +231,7 @@ h2 {
 }
 
 /* Technology image */
+
 .technology-image {
   width:100%;
   max-width:1000px;
@@ -183,6 +243,7 @@ h2 {
 }
 
 /* Coin image */
+
 .coin-showcase {
   text-align:center;
   margin:35px auto;
@@ -203,12 +264,14 @@ h2 {
 }
 
 /* Roadmap */
+
 .roadmap li {
   margin:18px 0;
   color:var(--muted);
 }
 
 /* Our Principles image */
+
 .principles-image {
   width:100%;
   max-width:1000px;
@@ -220,6 +283,7 @@ h2 {
 }
 
 /* Security principle */
+
 .security-card {
   background:var(--panel);
   border:1px solid var(--gold);
@@ -242,6 +306,8 @@ h2 {
   padding-left:22px;
 }
 
+/* Notices */
+
 .notice {
   background:#192337;
   border-left:3px solid var(--gold);
@@ -249,6 +315,45 @@ h2 {
   color:var(--muted);
   border-radius:4px;
   margin-top:25px;
+}
+
+/* Whitepaper section */
+
+.whitepaper-card {
+  background:var(--panel);
+  border:1px solid var(--gold);
+  border-radius:12px;
+  padding:35px;
+  text-align:center;
+  margin-top:30px;
+}
+
+.whitepaper-card h3 {
+  color:var(--gold);
+  font-size:24px;
+}
+
+.whitepaper-card p {
+  color:var(--muted);
+  max-width:700px;
+  margin:15px auto;
+}
+
+.whitepaper-icon {
+  font-size:48px;
+  margin-bottom:10px;
+}
+
+.whitepaper-actions {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+  margin-top:20px;
+}
+
+.whitepaper-actions .button {
+  margin-top:0;
 }
 
 footer {
@@ -259,7 +364,38 @@ footer {
   font-size:13px;
 }
 
+/* Right-to-left languages */
+
+html[dir="rtl"] body {
+  direction:rtl;
+  text-align:right;
+}
+
+html[dir="rtl"] nav {
+  direction:rtl;
+}
+
+html[dir="rtl"] .notice {
+  border-left:none;
+  border-right:3px solid var(--gold);
+}
+
+html[dir="rtl"] .security-card ul {
+  padding-left:0;
+  padding-right:22px;
+}
+
+html[dir="rtl"] .hero,
+html[dir="rtl"] .coin-showcase,
+html[dir="rtl"] footer,
+html[dir="rtl"] .whitepaper-card {
+  text-align:center;
+}
+
+/* Mobile */
+
 @media(max-width:700px) {
+
   header {
     flex-direction:column;
     padding:18px 5%;
@@ -289,13 +425,19 @@ footer {
   h2 {
     font-size:27px;
   }
+
+  .whitepaper-card {
+    padding:22px;
+  }
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
+
   <div class="logo">
     <img
       src="kalhor-logo.jpg"
@@ -303,24 +445,44 @@ footer {
   </div>
 
   <nav>
+
     <a href="#about">About</a>
+
     <a href="#technology">Technology</a>
+
     <a href="#tokenomics">Tokenomics</a>
+
     <a href="#roadmap">Roadmap</a>
+
     <a href="#principles">Our Principles</a>
+
+    <a href="#whitepaper">Whitepaper</a>
+
+    <div class="language-box">
+      <span>🌐</span>
+      <div id="google_translate_element"></div>
+    </div>
+
   </nav>
+
 </header>
 
 <!-- Main Blockchain Concept Image -->
+
 <section class="hero-image">
+
   <img
     src="file_0000000094f881f480487631af6eff83.png"
     alt="KALHOR ENERGY Blockchain Network">
+
 </section>
 
 <main>
 
+<!-- Hero -->
+
 <section class="hero">
+
   <h1>KALHOR <span>ENERGY</span></h1>
 
   <p>
@@ -336,10 +498,13 @@ footer {
   <p>
     <strong>Native Asset Concept: KALH</strong>
   </p>
+
 </section>
 
 <!-- About -->
+
 <section id="about">
+
   <h2>About KALHOR ENERGY</h2>
 
   <p class="intro">
@@ -356,10 +521,13 @@ footer {
     exploring smart contracts and decentralized applications
     after the foundational blockchain has been developed and tested.
   </p>
+
 </section>
 
 <!-- Technology -->
+
 <section id="technology">
+
   <h2>Technology & Vision</h2>
 
   <p class="intro">
@@ -376,42 +544,57 @@ footer {
   <div class="grid">
 
     <div class="card">
+
       <h3>Proof of Work</h3>
+
       <p>
         A mining-based consensus model designed around
         computational work and verifiable block production.
       </p>
+
     </div>
 
     <div class="card">
+
       <h3>Decentralization</h3>
+
       <p>
         A long-term commitment to open participation,
         transparent rules and reduced dependence on central control.
       </p>
+
     </div>
 
     <div class="card">
+
       <h3>Open Source</h3>
+
       <p>
         A development vision built around public documentation,
         reviewable code and community participation.
       </p>
+
     </div>
 
     <div class="card">
+
       <h3>Future Expansion</h3>
+
       <p>
         Smart contracts and decentralized applications may be
         explored after the base network reaches sufficient maturity.
       </p>
+
     </div>
 
   </div>
+
 </section>
 
 <!-- Tokenomics -->
+
 <section id="tokenomics">
+
   <h2>KALH Tokenomics</h2>
 
   <p class="intro">
@@ -421,6 +604,7 @@ footer {
   </p>
 
   <div class="coin-showcase">
+
     <img
       src="kalh-coin.jpg"
       alt="KALHOR ENERGY KALH Coin Design">
@@ -428,35 +612,48 @@ footer {
     <p class="coin-caption">
       KALHOR ENERGY — KALH Coin Concept
     </p>
+
   </div>
 
   <div class="grid">
 
     <div class="card">
+
       <div class="stat">10M</div>
+
       <h3>Founder Allocation</h3>
+
       <p>
         Planned gradual release over time, subject to transparent
         release rules.
       </p>
+
     </div>
 
     <div class="card">
+
       <div class="stat">30M</div>
+
       <h3>Public Mining</h3>
+
       <p>
         Reserved for future Proof of Work mining rewards and
         network incentives.
       </p>
+
     </div>
 
     <div class="card">
+
       <div class="stat">10M</div>
+
       <h3>Initial Offering</h3>
+
       <p>
         Reserved for a possible future offering, subject to
         legal, technical and operational readiness.
       </p>
+
     </div>
 
   </div>
@@ -465,10 +662,13 @@ footer {
     Maximum proposed supply: 50,000,000 KALH.
     No public token sale or active mainnet is currently available.
   </p>
+
 </section>
 
 <!-- Roadmap -->
+
 <section id="roadmap">
+
   <h2>Development Roadmap</h2>
 
   <ol class="roadmap">
@@ -504,10 +704,13 @@ footer {
     </li>
 
   </ol>
+
 </section>
 
 <!-- Our Principles -->
+
 <section id="principles">
+
   <h2>Our Principles</h2>
 
   <p class="intro">
@@ -522,6 +725,7 @@ footer {
     alt="KALHOR ENERGY — Our Principles">
 
   <div class="security-card">
+
     <h3>Security Before Speed</h3>
 
     <p>
@@ -537,24 +741,30 @@ footer {
     </p>
 
     <ul>
+
       <li>
         Critical protocol changes require independent review.
       </li>
+
       <li>
         Sensitive changes must undergo testing and approval.
       </li>
+
       <li>
         Supply limits and block validation rules must be
         protected by strict verification.
       </li>
+
       <li>
         Security testing, independent audits and transparent
         development are essential.
       </li>
+
       <li>
         Network monitoring and incident response planning
         are part of the security approach.
       </li>
+
     </ul>
 
     <p>
@@ -562,18 +772,158 @@ footer {
       or blockchain system can honestly be guaranteed
       to be completely immune to attacks.
     </p>
+
+  </div>
+
+</section>
+
+<!-- Whitepaper -->
+
+<section id="whitepaper">
+
+  <h2>Official Whitepaper</h2>
+
+  <p class="intro">
+    Explore the vision, principles, proposed architecture,
+    economic model, security approach and development roadmap
+    of KALHOR ENERGY.
+  </p>
+
+  <div class="whitepaper-card">
+
+    <div class="whitepaper-icon">📄</div>
+
+    <h3>KALHOR ENERGY — KALH Whitepaper</h3>
+
+    <p>
+      The official English documentation of the independent
+      KALHOR ENERGY blockchain project.
+    </p>
+
+    <p>
+      The English edition is the primary reference for the
+      project's technical and economic documentation.
+    </p>
+
+    <div class="whitepaper-actions">
+
+      <a
+        class="button"
+        href="whitepaper.html">
+        Read Whitepaper
+      </a>
+
+    </div>
+
+    <p class="language-note">
+      Additional language editions may be published as
+      translations are prepared and reviewed.
+    </p>
+
   </div>
 
 </section>
 
 </main>
 
+<!-- Footer -->
+
 <footer>
-  <strong>KALHOR ENERGY</strong> | KALH<br>
-  Independent Blockchain Project<br>
-  © 2026 KALHOR ENERGY. All rights reserved.<br><br>
+
+  <strong>KALHOR ENERGY</strong> | KALH
+
+  <br>
+
+  Independent Blockchain Project
+
+  <br>
+
+  © 2026 KALHOR ENERGY. All rights reserved.
+
+  <br><br>
+
   Experimental project. Not financial advice.
+
+  <br><br>
+
+  <a
+    href="whitepaper.html"
+    style="color:#e5b84b;text-decoration:none;">
+    Official Whitepaper
+  </a>
+
 </footer>
+
+<!-- Google Translate -->
+
+<script type="text/javascript">
+
+function googleTranslateElementInit() {
+
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: 'en',
+      autoDisplay: false,
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    },
+    'google_translate_element'
+  );
+
+}
+
+</script>
+
+<script
+  type="text/javascript"
+  src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+
+<!-- RTL language support -->
+
+<script>
+
+(function() {
+
+  const rtlLanguages = [
+    'fa',
+    'ar',
+    'ur',
+    'ps',
+    'sd',
+    'ug',
+    'yi',
+    'he'
+  ];
+
+  function updateDirection() {
+
+    const currentLang =
+      document.documentElement.lang.toLowerCase().split('-')[0];
+
+    if (rtlLanguages.includes(currentLang)) {
+
+      document.documentElement.dir = 'rtl';
+
+    } else {
+
+      document.documentElement.dir = 'ltr';
+
+    }
+
+  }
+
+  const observer = new MutationObserver(updateDirection);
+
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['lang']
+  });
+
+  updateDirection();
+
+})();
+
+</script>
 
 </body>
 </html>
