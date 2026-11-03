@@ -18,12 +18,7 @@
   --muted:#aab5c5;
   --line:#26354a;
 }
-
-* {
-  box-sizing:border-box;
-  scroll-behavior:smooth;
-}
-
+* { box-sizing:border-box; scroll-behavior:smooth; }
 body {
   margin:0;
   font-family:Arial,Helvetica,sans-serif;
@@ -31,7 +26,6 @@ body {
   color:var(--text);
   line-height:1.7;
 }
-
 header {
   padding:18px 8%;
   display:flex;
@@ -43,14 +37,7 @@ header {
   position:relative;
   z-index:20;
 }
-
-.logo img {
-  height:58px;
-  width:auto;
-  display:block;
-  object-fit:contain;
-}
-
+.logo img { height:58px; width:auto; display:block; object-fit:contain; }
 .header-tools {
   display:flex;
   align-items:center;
@@ -58,30 +45,12 @@ header {
   flex-wrap:wrap;
   justify-content:flex-end;
 }
-
-nav {
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  gap:18px;
-}
-
-nav a {
-  color:var(--muted);
-  text-decoration:none;
-  font-size:14px;
-}
-
-nav a:hover {
-  color:var(--gold);
-}
+nav { display:flex; flex-wrap:wrap; align-items:center; gap:18px; }
+nav a { color:var(--muted); text-decoration:none; font-size:14px; }
+nav a:hover { color:var(--gold); }
 
 /* Language dropdown */
-
-.language-box {
-  position:relative;
-}
-
+.language-box { position:relative; }
 .language-toggle {
   background:var(--panel);
   color:var(--gold);
@@ -92,11 +61,7 @@ nav a:hover {
   font-size:14px;
   white-space:nowrap;
 }
-
-.language-toggle:hover {
-  background:#26354a;
-}
-
+.language-toggle:hover { background:#26354a; }
 #google_translate_element {
   position:absolute!important;
   width:1px!important;
@@ -105,24 +70,10 @@ nav a:hover {
   clip:rect(0,0,0,0)!important;
   white-space:nowrap!important;
 }
-
-.goog-te-gadget {
-  display:none!important;
-}
-
-.goog-logo-link,
-.goog-te-gadget span {
-  display:none!important;
-}
-
-.goog-te-banner-frame {
-  display:none!important;
-}
-
-body {
-  top:0!important;
-}
-
+.goog-te-gadget { display:none!important; }
+.goog-logo-link, .goog-te-gadget span { display:none!important; }
+.goog-te-banner-frame { display:none!important; }
+body { top:0!important; }
 .language-dropdown {
   display:none;
   position:absolute;
@@ -137,11 +88,7 @@ body {
   box-shadow:0 12px 30px #0009;
   z-index:200;
 }
-
-.language-dropdown.open {
-  display:block;
-}
-
+.language-dropdown.open { display:block; }
 .language-search {
   width:100%;
   background:#080d16;
@@ -153,16 +100,8 @@ body {
   font-size:14px;
   margin-bottom:9px;
 }
-
-.language-search:focus {
-  border-color:var(--gold);
-}
-
-.language-options {
-  max-height:260px;
-  overflow-y:auto;
-}
-
+.language-search:focus { border-color:var(--gold); }
+.language-options { max-height:260px; overflow-y:auto; }
 .language-option {
   display:block;
   width:100%;
@@ -175,29 +114,20 @@ body {
   cursor:pointer;
   font-size:14px;
 }
-
-.language-option:hover,
-.language-option:focus {
+.language-option:hover, .language-option:focus {
   background:#26354a;
   color:var(--gold);
   outline:none;
 }
-
-.language-empty {
-  padding:12px;
-  color:var(--muted);
-  font-size:13px;
-}
+.language-empty { padding:12px; color:var(--muted); font-size:13px; }
 
 /* Website search */
-
 .site-search-wrap {
   position:relative;
   min-width:230px;
   max-width:330px;
   width:100%;
 }
-
 .site-search {
   width:100%;
   background:var(--panel);
@@ -208,11 +138,7 @@ body {
   font-size:14px;
   outline:none;
 }
-
-.site-search:focus {
-  border-color:var(--gold);
-}
-
+.site-search:focus { border-color:var(--gold); }
 .site-search-button {
   position:absolute;
   right:5px;
@@ -225,7 +151,6 @@ body {
   cursor:pointer;
   padding:5px;
 }
-
 .search-results {
   display:none;
   position:absolute;
@@ -241,11 +166,7 @@ body {
   box-shadow:0 12px 30px #0009;
   z-index:100;
 }
-
-.search-results.open {
-  display:block;
-}
-
+.search-results.open { display:block; }
 .search-result {
   display:block;
   padding:10px;
@@ -254,21 +175,9 @@ body {
   text-decoration:none;
   border-bottom:1px solid var(--line);
 }
-
-.search-result:last-child {
-  border-bottom:0;
-}
-
-.search-result:hover {
-  background:#26354a;
-}
-
-.search-result strong {
-  display:block;
-  color:var(--gold);
-  font-size:14px;
-}
-
+.search-result:last-child { border-bottom:0; }
+.search-result:hover { background:#26354a; }
+.search-result strong { display:block; color:var(--gold); font-size:14px; }
 .search-result small {
   display:block;
   color:var(--muted);
@@ -276,20 +185,10 @@ body {
   line-height:1.5;
   margin-top:3px;
 }
-
-.search-message {
-  padding:10px;
-  color:var(--muted);
-  font-size:13px;
-}
+.search-message { padding:10px; color:var(--muted); font-size:13px; }
 
 /* Main images */
-
-.hero-image {
-  padding:25px 8%;
-  text-align:center;
-}
-
+.hero-image { padding:25px 8%; text-align:center; }
 .hero-image img {
   width:100%;
   max-width:1100px;
@@ -299,30 +198,14 @@ body {
 }
 
 /* Hero */
-
 .hero {
   text-align:center;
   padding:100px 20px;
   background:radial-gradient(ellipse at top,#1b2b42 0%,var(--bg) 70%);
 }
-
-.hero h1 {
-  font-size:clamp(38px,7vw,70px);
-  margin:0;
-  letter-spacing:4px;
-}
-
-.hero h1 span {
-  color:var(--gold);
-}
-
-.hero p {
-  max-width:760px;
-  margin:24px auto;
-  color:var(--muted);
-  font-size:18px;
-}
-
+.hero h1 { font-size:clamp(38px,7vw,70px); margin:0; letter-spacing:4px; }
+.hero h1 span { color:var(--gold); }
+.hero p { max-width:760px; margin:24px auto; color:var(--muted); font-size:18px; }
 .button {
   display:inline-block;
   margin-top:20px;
@@ -333,325 +216,121 @@ body {
   border-radius:5px;
   transition:.3s;
 }
-
-.button:hover {
-  background:var(--gold);
-  color:var(--bg);
-}
+.button:hover { background:var(--gold); color:var(--bg); }
 
 /* Sections */
-
-section {
-  padding:75px 9%;
-  max-width:1250px;
-  margin:auto;
-}
-
-h2 {
-  font-size:32px;
-  color:var(--gold);
-  margin-top:0;
-}
-
-.intro {
-  color:var(--muted);
-  max-width:850px;
-}
-
+section { padding:75px 9%; max-width:1250px; margin:auto; }
+h2 { font-size:32px; color:var(--gold); margin-top:0; }
+.intro { color:var(--muted); max-width:850px; }
 .grid {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:20px;
   margin-top:30px;
 }
-
 .card {
   background:var(--panel);
   border:1px solid var(--line);
   border-radius:10px;
   padding:25px;
 }
-
-.card h3 {
-  color:var(--gold);
-  margin-top:0;
-}
-
-.card p {
-  color:var(--muted);
-}
-
-.stat {
-  font-size:30px;
-  color:var(--gold);
-  font-weight:bold;
-}
-
+.card h3 { color:var(--gold); margin-top:0; }
+.card p { color:var(--muted); }
+.stat { font-size:30px; color:var(--gold); font-weight:bold; }
 .technology-image {
-  width:100%;
-  max-width:1000px;
-  height:auto;
-  display:block;
-  margin:30px auto;
-  border-radius:16px;
-  border:1px solid var(--line);
+  width:100%; max-width:1000px; height:auto; display:block;
+  margin:30px auto; border-radius:16px; border:1px solid var(--line);
 }
-
-.coin-showcase {
-  text-align:center;
-  margin:35px auto;
-}
-
+.coin-showcase { text-align:center; margin:35px auto; }
 .coin-showcase img {
-  width:100%;
-  max-width:260px;
-  height:auto;
-  object-fit:contain;
-  border-radius:12px;
+  width:100%; max-width:260px; height:auto; object-fit:contain; border-radius:12px;
 }
-
-.coin-caption {
-  color:var(--muted);
-  margin-top:12px;
-  font-size:14px;
-}
-
-.roadmap li {
-  margin:18px 0;
-  color:var(--muted);
-}
-
+.coin-caption { color:var(--muted); margin-top:12px; font-size:14px; }
+.roadmap li { margin:18px 0; color:var(--muted); }
 .principles-image {
-  width:100%;
-  max-width:1000px;
-  display:block;
-  height:auto;
-  margin:30px auto;
-  border-radius:16px;
-  border:1px solid var(--line);
+  width:100%; max-width:1000px; display:block; height:auto;
+  margin:30px auto; border-radius:16px; border:1px solid var(--line);
 }
-
 .security-card {
-  background:var(--panel);
-  border:1px solid var(--gold);
-  border-radius:10px;
-  padding:25px;
-  margin-top:30px;
+  background:var(--panel); border:1px solid var(--gold);
+  border-radius:10px; padding:25px; margin-top:30px;
 }
-
-.security-card h3 {
-  color:var(--gold);
-  margin-top:0;
-}
-
-.security-card p,
-.security-card li {
-  color:var(--muted);
-}
-
-.security-card ul {
-  padding-left:22px;
-}
-
+.security-card h3 { color:var(--gold); margin-top:0; }
+.security-card p, .security-card li { color:var(--muted); }
+.security-card ul { padding-left:22px; }
 .notice {
-  background:#192337;
-  border-left:3px solid var(--gold);
-  padding:18px;
-  color:var(--muted);
-  border-radius:4px;
-  margin-top:25px;
+  background:#192337; border-left:3px solid var(--gold);
+  padding:18px; color:var(--muted); border-radius:4px; margin-top:25px;
 }
-
 .whitepaper-card {
-  background:var(--panel);
-  border:1px solid var(--gold);
-  border-radius:12px;
-  padding:35px;
-  text-align:center;
-  margin-top:30px;
+  background:var(--panel); border:1px solid var(--gold);
+  border-radius:12px; padding:35px; text-align:center; margin-top:30px;
 }
-
-.whitepaper-card h3 {
-  color:var(--gold);
-  font-size:24px;
-}
-
-.whitepaper-card p {
-  color:var(--muted);
-  max-width:700px;
-  margin:15px auto;
-}
-
-.whitepaper-icon {
-  font-size:48px;
-  margin-bottom:10px;
-}
-
+.whitepaper-card h3 { color:var(--gold); font-size:24px; }
+.whitepaper-card p { color:var(--muted); max-width:700px; margin:15px auto; }
+.whitepaper-icon { font-size:48px; margin-bottom:10px; }
 .whitepaper-actions {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:15px;
-  margin-top:20px;
+  display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin-top:20px;
 }
-
-.whitepaper-actions .button {
-  margin-top:0;
-}
-
+.whitepaper-actions .button { margin-top:0; }
 footer {
-  border-top:1px solid var(--line);
-  text-align:center;
-  padding:35px 15px;
-  color:var(--muted);
-  font-size:13px;
+  border-top:1px solid var(--line); text-align:center;
+  padding:35px 15px; color:var(--muted); font-size:13px;
 }
 
 /* RTL */
-
-html[dir="rtl"] body {
-  direction:rtl;
-  text-align:right;
-}
-
-html[dir="rtl"] nav {
-  direction:rtl;
-}
-
-html[dir="rtl"] .notice {
-  border-left:none;
-  border-right:3px solid var(--gold);
-}
-
-html[dir="rtl"] .security-card ul {
-  padding-left:0;
-  padding-right:22px;
-}
-
+html[dir="rtl"] body { direction:rtl; text-align:right; }
+html[dir="rtl"] nav { direction:rtl; }
+html[dir="rtl"] .notice { border-left:none; border-right:3px solid var(--gold); }
+html[dir="rtl"] .security-card ul { padding-left:0; padding-right:22px; }
 html[dir="rtl"] .hero,
 html[dir="rtl"] .coin-showcase,
 html[dir="rtl"] footer,
-html[dir="rtl"] .whitepaper-card {
-  text-align:center;
-}
-
-html[dir="rtl"] .language-dropdown {
-  right:auto;
-  left:0;
-}
-
-html[dir="rtl"] .language-option {
-  text-align:right;
-}
-
-html[dir="rtl"] .site-search {
-  padding:10px 12px 10px 38px;
-}
-
-html[dir="rtl"] .site-search-button {
-  right:auto;
-  left:5px;
-}
+html[dir="rtl"] .whitepaper-card { text-align:center; }
+html[dir="rtl"] .language-dropdown { right:auto; left:0; }
+html[dir="rtl"] .language-option { text-align:right; }
+html[dir="rtl"] .site-search { padding:10px 12px 10px 38px; }
+html[dir="rtl"] .site-search-button { right:auto; left:5px; }
 
 /* Mobile */
-
 @media(max-width:900px) {
-  header {
-    flex-direction:column;
-    padding:18px 5%;
-  }
-
-  .header-tools {
-    justify-content:center;
-    width:100%;
-  }
-
-  .site-search-wrap {
-    max-width:420px;
-  }
+  header { flex-direction:column; padding:18px 5%; }
+  .header-tools { justify-content:center; width:100%; }
+  .site-search-wrap { max-width:420px; }
 }
-
 @media(max-width:700px) {
-  nav {
-    justify-content:center;
-    gap:12px;
-  }
-
-  nav a {
-    font-size:13px;
-  }
-
-  .hero {
-    padding:70px 18px;
-  }
-
-  section {
-    padding:55px 7%;
-  }
-
-  .hero-image {
-    padding:18px 5%;
-  }
-
-  h2 {
-    font-size:27px;
-  }
-
-  .whitepaper-card {
-    padding:22px;
-  }
-
-  .header-tools {
-    gap:10px;
-  }
-
-  .site-search-wrap {
-    min-width:min(100%,280px);
-  }
-
-  .language-dropdown {
-    right:50%;
-    transform:translateX(50%);
-  }
-
+  nav { justify-content:center; gap:12px; }
+  nav a { font-size:13px; }
+  .hero { padding:70px 18px; }
+  section { padding:55px 7%; }
+  .hero-image { padding:18px 5%; }
+  h2 { font-size:27px; }
+  .whitepaper-card { padding:22px; }
+  .header-tools { gap:10px; }
+  .site-search-wrap { min-width:min(100%,280px); }
+  .language-dropdown { right:50%; transform:translateX(50%); }
   html[dir="rtl"] .language-dropdown {
-    left:50%;
-    right:auto;
-    transform:translateX(-50%);
+    left:50%; right:auto; transform:translateX(-50%);
   }
 }
 </style>
 </head>
 
 <body>
-
 <header>
   <div class="logo">
     <img src="kalhor-logo.jpg" alt="KALHOR ENERGY Official Logo">
   </div>
 
   <div class="header-tools">
-
     <div class="site-search-wrap">
-      <input
-        id="siteSearch"
-        class="site-search"
-        type="search"
-        placeholder="Search this website..."
-        aria-label="Search website"
+      <input id="siteSearch" class="site-search" type="search"
+        placeholder="Search this website..." aria-label="Search website"
         autocomplete="off">
-
-      <button
-        id="siteSearchButton"
-        class="site-search-button"
-        type="button"
-        aria-label="Search">⌕</button>
-
-      <div
-        id="siteSearchResults"
-        class="search-results"
-        role="listbox"
-        aria-label="Website search results"></div>
+      <button id="siteSearchButton" class="site-search-button"
+        type="button" aria-label="Search">⌕</button>
+      <div id="siteSearchResults" class="search-results"
+        role="listbox" aria-label="Website search results"></div>
     </div>
 
     <nav>
@@ -662,77 +341,48 @@ html[dir="rtl"] .site-search-button {
       <a href="#principles">Our Principles</a>
       <a href="#whitepaper">Whitepaper</a>
 
-      <!-- Language dropdown -->
       <div class="language-box">
-
-        <button
-          type="button"
-          id="languageToggle"
-          class="language-toggle"
-          aria-expanded="false"
-          aria-controls="languageDropdown">
+        <button type="button" id="languageToggle" class="language-toggle"
+          aria-expanded="false" aria-controls="languageDropdown">
           🌐 Language ▾
         </button>
-
-        <div
-          id="languageDropdown"
-          class="language-dropdown">
-
-          <input
-            id="languageSearch"
-            class="language-search"
-            type="search"
+        <div id="languageDropdown" class="language-dropdown">
+          <input id="languageSearch" class="language-search" type="search"
             placeholder="Search country or language..."
-            aria-label="Search country or language"
-            autocomplete="off">
-
-          <div
-            id="languageOptions"
-            class="language-options"
-            role="listbox">
-          </div>
-
+            aria-label="Search country or language" autocomplete="off">
+          <div id="languageOptions" class="language-options" role="listbox"></div>
         </div>
-
         <div id="google_translate_element"></div>
-
       </div>
     </nav>
   </div>
 </header>
 
 <section class="hero-image">
-  <img
-    src="file_0000000094f881f480487631af6eff83.png"
+  <img src="file_0000000094f881f480487631af6eff83.png"
     alt="KALHOR ENERGY Blockchain Network">
 </section>
 
 <main>
-
 <section class="hero">
   <h1>KALHOR <span>ENERGY</span></h1>
-
   <p>
     Building an Independent Blockchain for the Future.
     Inspired by Proof of Work, decentralization,
     transparency and a limited digital supply.
   </p>
-
   <a class="button" href="#about">Discover the Project</a>
-
   <p><strong>Native Asset Concept: KALH</strong></p>
 </section>
 
 <section id="about">
   <h2>About KALHOR ENERGY</h2>
-
   <p class="intro">
     KALHOR ENERGY is an independent blockchain project in early
     development. Its vision is to build a decentralized,
     open-source digital network based on transparent rules,
     public participation and verifiable technology.
   </p>
-
   <p class="intro">
     The project draws inspiration from Bitcoin's core principles:
     Proof of Work, decentralization, network security and a
@@ -744,101 +394,61 @@ html[dir="rtl"] .site-search-button {
 
 <section id="technology">
   <h2>Technology &amp; Vision</h2>
-
   <p class="intro">
     KALHOR ENERGY aims to develop an independent blockchain
     with a secure and verifiable foundation, transparent
     protocol rules and open-source development.
   </p>
-
-  <img
-    class="technology-image"
-    src="KALHOR_TECHNOLOGY.png"
+  <img class="technology-image" src="KALHOR_TECHNOLOGY.png"
     alt="KALHOR ENERGY Technology and Blockchain Vision">
-
   <div class="grid">
     <div class="card">
       <h3>Proof of Work</h3>
-      <p>
-        A mining-based consensus model designed around
-        computational work and verifiable block production.
-      </p>
+      <p>A mining-based consensus model designed around computational work and verifiable block production.</p>
     </div>
-
     <div class="card">
       <h3>Decentralization</h3>
-      <p>
-        A long-term commitment to open participation,
-        transparent rules and reduced dependence on central control.
-      </p>
+      <p>A long-term commitment to open participation, transparent rules and reduced dependence on central control.</p>
     </div>
-
     <div class="card">
       <h3>Open Source</h3>
-      <p>
-        A development vision built around public documentation,
-        reviewable code and community participation.
-      </p>
+      <p>A development vision built around public documentation, reviewable code and community participation.</p>
     </div>
-
     <div class="card">
       <h3>Future Expansion</h3>
-      <p>
-        Smart contracts and decentralized applications may be
-        explored after the base network reaches sufficient maturity.
-      </p>
+      <p>Smart contracts and decentralized applications may be explored after the base network reaches sufficient maturity.</p>
     </div>
   </div>
 </section>
 
 <section id="tokenomics">
   <h2>KALH Tokenomics</h2>
-
   <p class="intro">
     The current proposed maximum supply is 50,000,000 KALH.
     The following allocation represents the project's current
     design proposal and is subject to technical and legal review.
   </p>
-
   <div class="coin-showcase">
-    <img
-      src="kalh-coin.jpg"
-      alt="KALHOR ENERGY KALH Coin Design">
-
-    <p class="coin-caption">
-      KALHOR ENERGY — KALH Coin Concept
-    </p>
+    <img src="kalh-coin.jpg" alt="KALHOR ENERGY KALH Coin Design">
+    <p class="coin-caption">KALHOR ENERGY — KALH Coin Concept</p>
   </div>
-
   <div class="grid">
     <div class="card">
       <div class="stat">10M</div>
       <h3>Founder Allocation</h3>
-      <p>
-        Planned gradual release over time, subject to transparent
-        release rules.
-      </p>
+      <p>Planned gradual release over time, subject to transparent release rules.</p>
     </div>
-
     <div class="card">
       <div class="stat">30M</div>
       <h3>Public Mining</h3>
-      <p>
-        Reserved for future Proof of Work mining rewards and
-        network incentives.
-      </p>
+      <p>Reserved for future Proof of Work mining rewards and network incentives.</p>
     </div>
-
     <div class="card">
       <div class="stat">10M</div>
       <h3>Initial Offering</h3>
-      <p>
-        Reserved for a possible future offering, subject to
-        legal, technical and operational readiness.
-      </p>
+      <p>Reserved for a possible future offering, subject to legal, technical and operational readiness.</p>
     </div>
   </div>
-
   <p class="notice">
     Maximum proposed supply: 50,000,000 KALH.
     No public token sale or active mainnet is currently available.
@@ -847,69 +457,37 @@ html[dir="rtl"] .site-search-button {
 
 <section id="roadmap">
   <h2>Development Roadmap</h2>
-
   <ol class="roadmap">
-    <li>
-      <strong>Phase 1 — Foundation:</strong>
-      Initial concept, project structure and local prototype.
-    </li>
-
-    <li>
-      <strong>Phase 2 — Validation:</strong>
-      Strengthen blockchain logic, supply rules and security testing.
-    </li>
-
-    <li>
-      <strong>Phase 3 — Public Development:</strong>
-      Publish technical documentation and invite independent review.
-    </li>
-
-    <li>
-      <strong>Phase 4 — Test Network:</strong>
-      Explore a public testnet after the core implementation is ready.
-    </li>
-
-    <li>
-      <strong>Phase 5 — Mainnet Research:</strong>
-      Evaluate security, decentralization and launch readiness.
-    </li>
-
-    <li>
-      <strong>Phase 6 — Future Ecosystem:</strong>
-      Explore smart contracts and decentralized applications.
-    </li>
+    <li><strong>Phase 1 — Foundation:</strong> Initial concept, project structure and local prototype.</li>
+    <li><strong>Phase 2 — Validation:</strong> Strengthen blockchain logic, supply rules and security testing.</li>
+    <li><strong>Phase 3 — Public Development:</strong> Publish technical documentation and invite independent review.</li>
+    <li><strong>Phase 4 — Test Network:</strong> Explore a public testnet after the core implementation is ready.</li>
+    <li><strong>Phase 5 — Mainnet Research:</strong> Evaluate security, decentralization and launch readiness.</li>
+    <li><strong>Phase 6 — Future Ecosystem:</strong> Explore smart contracts and decentralized applications.</li>
   </ol>
 </section>
 
 <section id="principles">
   <h2>Our Principles</h2>
-
   <p class="intro">
     Build carefully. Verify openly. Develop transparently.
     Long-term trust must be earned through technology,
     security and accountability.
   </p>
-
-  <img
-    class="principles-image"
-    src="our-principles.jpg"
+  <img class="principles-image" src="our-principles.jpg"
     alt="KALHOR ENERGY — Our Principles">
-
   <div class="security-card">
     <h3>Security Before Speed</h3>
-
     <p>
       KALHOR ENERGY places security before rapid development
       or launch. The long-term protection of the network
       must come before speed.
     </p>
-
     <p>
       No single person, including the founder, should have
       unilateral authority to change critical blockchain
       protocol rules.
     </p>
-
     <ul>
       <li>Critical protocol changes require independent review.</li>
       <li>Sensitive changes must undergo testing and approval.</li>
@@ -917,7 +495,6 @@ html[dir="rtl"] .site-search-button {
       <li>Security testing, independent audits and transparent development are essential.</li>
       <li>Network monitoring and incident response planning are part of the security approach.</li>
     </ul>
-
     <p>
       Security is an ongoing responsibility. No software
       or blockchain system can honestly be guaranteed
@@ -928,63 +505,51 @@ html[dir="rtl"] .site-search-button {
 
 <section id="whitepaper">
   <h2>Official Whitepaper</h2>
-
   <p class="intro">
     Explore the vision, principles, proposed architecture,
     economic model, security approach and development roadmap
     of KALHOR ENERGY.
   </p>
-
   <div class="whitepaper-card">
     <div class="whitepaper-icon">📄</div>
-
     <h3>KALHOR ENERGY — KALH Whitepaper</h3>
-
     <p>
       The official English documentation of the independent
       KALHOR ENERGY blockchain project.
     </p>
-
     <p>
       The English edition is the primary reference for the
       project's technical and economic documentation.
     </p>
-
     <div class="whitepaper-actions">
-      <a class="button" href="whitepaper.html">
-        Read Whitepaper
-      </a>
+      <a class="button" href="whitepaper.html">Read Whitepaper</a>
     </div>
-
     <p class="language-note">
       Additional language editions may be published as
       translations are prepared and reviewed.
     </p>
   </div>
 </section>
-
 </main>
 
 <footer>
   <strong>KALHOR ENERGY</strong> | KALH
-  <br>
-  Independent Blockchain Project
-  <br>
-  © 2026 KALHOR ENERGY. All rights reserved.
+  <br>Independent Blockchain Project
+  <br>© 2026 KALHOR ENERGY. All rights reserved.
+  <br><br>Experimental project. Not financial advice.
   <br><br>
-  Experimental project. Not financial advice.
-  <br><br>
-  <a
-    href="whitepaper.html"
-    style="color:#e5b84b;text-decoration:none;">
+  <a href="whitepaper.html" style="color:#e5b84b;text-decoration:none;">
     Official Whitepaper
   </a>
 </footer>
 
-<!-- Google Translate -->
-
+<!-- Google Translate initialization -->
 <script>
 function googleTranslateElementInit() {
+  if (!window.google || !google.translate || !google.translate.TranslateElement) {
+    return;
+  }
+
   new google.translate.TranslateElement(
     {
       pageLanguage:'en',
@@ -995,25 +560,25 @@ function googleTranslateElementInit() {
   );
 }
 </script>
-
 <script
   type="text/javascript"
-  src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+  src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+  async>
 </script>
 
 <!-- RTL language support -->
-
 <script>
 (function() {
-  const rtlLanguages=['fa','ar','ur','ps','sd','ug','yi','he'];
+  const rtlLanguages = ['fa','ar','ur','ps','sd','ug','yi','he'];
 
   function updateDirection() {
-    const currentLang=document.documentElement.lang.toLowerCase().split('-')[0];
-    document.documentElement.dir=
-      rtlLanguages.includes(currentLang)?'rtl':'ltr';
+    const currentLang = (document.documentElement.lang || 'en')
+      .toLowerCase().split('-')[0];
+    document.documentElement.dir =
+      rtlLanguages.includes(currentLang) ? 'rtl' : 'ltr';
   }
 
-  new MutationObserver(updateDirection).observe(document.documentElement,{
+  new MutationObserver(updateDirection).observe(document.documentElement, {
     attributes:true,
     attributeFilter:['lang']
   });
@@ -1023,60 +588,55 @@ function googleTranslateElementInit() {
 </script>
 
 <!-- Website content search -->
-
 <script>
 (function() {
-  const input=document.getElementById('siteSearch');
-  const resultsBox=document.getElementById('siteSearchResults');
-  const button=document.getElementById('siteSearchButton');
+  const input = document.getElementById('siteSearch');
+  const resultsBox = document.getElementById('siteSearchResults');
+  const button = document.getElementById('siteSearchButton');
 
-  let searchItems=[];
-  let whitepaperLoaded=false;
+  let searchItems = [];
+  let whitepaperLoaded = false;
 
   function clean(text) {
-    return (text||'').replace(/\s+/g,' ').trim();
+    return (text || '').replace(/\s+/g,' ').trim();
   }
 
-  function collectPage(doc,base) {
-    const nodes=doc.querySelectorAll('h1,h2,h3,p,li');
+  function collectPage(doc, base) {
+    const nodes = doc.querySelectorAll('h1,h2,h3,p,li');
 
     nodes.forEach((node,index) => {
-      const text=clean(node.textContent);
-      if(!text || text.length<3) return;
+      const text = clean(node.textContent);
+      if (!text || text.length < 3) return;
 
-      const section=node.closest('section[id]');
-      let href=base+(section?'#'+section.id:'');
-
-      if(node.id) href=base+'#'+node.id;
+      const section = node.closest('section[id]');
+      let href = base + (section ? '#' + section.id : '');
+      if (node.id) href = base + '#' + node.id;
 
       searchItems.push({
         title:clean(
-          node.closest('section')?.querySelector('h2')?.textContent
-          ||node.textContent
+          node.closest('section')?.querySelector('h2')?.textContent ||
+          node.textContent
         ).slice(0,90),
         text:text,
         href:href,
-        key:base+'-'+index
+        key:base + '-' + index
       });
     });
   }
 
   function buildIndex() {
-    searchItems=[];
+    searchItems = [];
     collectPage(document,'');
 
-    if(!whitepaperLoaded) {
-      whitepaperLoaded=true;
-
+    if (!whitepaperLoaded) {
+      whitepaperLoaded = true;
       fetch('whitepaper.html')
         .then(response => {
-          if(!response.ok) {
-            throw new Error('Whitepaper unavailable');
-          }
+          if (!response.ok) throw new Error('Whitepaper unavailable');
           return response.text();
         })
         .then(markup => {
-          const doc=new DOMParser().parseFromString(markup,'text/html');
+          const doc = new DOMParser().parseFromString(markup,'text/html');
           collectPage(doc,'whitepaper.html');
         })
         .catch(() => {});
@@ -1084,35 +644,33 @@ function googleTranslateElementInit() {
   }
 
   function showResults() {
-    const query=clean(input.value).toLowerCase();
-    resultsBox.innerHTML='';
+    const query = clean(input.value).toLowerCase();
+    resultsBox.innerHTML = '';
 
-    if(!query) {
+    if (!query) {
       resultsBox.classList.remove('open');
       return;
     }
 
-    const matches=searchItems
-      .filter(item =>
-        (item.title+' '+item.text).toLowerCase().includes(query)
-      )
+    const matches = searchItems
+      .filter(item => (item.title + ' ' + item.text).toLowerCase().includes(query))
       .slice(0,12);
 
-    if(!matches.length) {
-      resultsBox.innerHTML=
+    if (!matches.length) {
+      resultsBox.innerHTML =
         '<div class="search-message">No matching content found.</div>';
     } else {
       matches.forEach(item => {
-        const a=document.createElement('a');
-        a.className='search-result';
-        a.href=item.href;
+        const a = document.createElement('a');
+        a.className = 'search-result';
+        a.href = item.href;
 
-        const strong=document.createElement('strong');
-        strong.textContent=item.title;
+        const strong = document.createElement('strong');
+        strong.textContent = item.title;
 
-        const small=document.createElement('small');
-        small.textContent=
-          item.text.slice(0,180)+(item.text.length>180?'…':'');
+        const small = document.createElement('small');
+        small.textContent =
+          item.text.slice(0,180) + (item.text.length > 180 ? '…' : '');
 
         a.append(strong,small);
         resultsBox.appendChild(a);
@@ -1123,129 +681,174 @@ function googleTranslateElementInit() {
   }
 
   buildIndex();
-
   input.addEventListener('input',showResults);
   button.addEventListener('click',showResults);
 
   document.addEventListener('click',event => {
-    if(!event.target.closest('.site-search-wrap')) {
+    if (!event.target.closest('.site-search-wrap')) {
       resultsBox.classList.remove('open');
     }
   });
 
   input.addEventListener('keydown',event => {
-    if(event.key==='Escape') {
-      resultsBox.classList.remove('open');
-    }
+    if (event.key === 'Escape') resultsBox.classList.remove('open');
 
-    if(event.key==='Enter') {
+    if (event.key === 'Enter') {
       showResults();
-      const first=resultsBox.querySelector('a');
-      if(first) location.href=first.href;
+      const first = resultsBox.querySelector('a');
+      if (first) location.href = first.href;
     }
   });
 })();
 </script>
 
-<!-- Searchable Google Translate language dropdown -->
-
+<!-- Independent searchable language list + Google Translate connection -->
 <script>
 (function() {
-  const toggle=document.getElementById('languageToggle');
-  const dropdown=document.getElementById('languageDropdown');
-  const search=document.getElementById('languageSearch');
-  const panel=document.getElementById('languageOptions');
-  const host=document.getElementById('google_translate_element');
+  const toggle = document.getElementById('languageToggle');
+  const dropdown = document.getElementById('languageDropdown');
+  const search = document.getElementById('languageSearch');
+  const panel = document.getElementById('languageOptions');
+  const host = document.getElementById('google_translate_element');
 
-  let languages=[];
+  // This list is independent of Google Translate loading.
+  const languages = [
+    ['af','Afrikaans'],['sq','Albanian'],['am','Amharic'],
+    ['ar','Arabic'],['hy','Armenian'],['az','Azerbaijani'],
+    ['eu','Basque'],['be','Belarusian'],['bn','Bengali'],
+    ['bs','Bosnian'],['bg','Bulgarian'],['my','Burmese'],
+    ['ca','Catalan'],['zh-CN','Chinese (Simplified)'],
+    ['zh-TW','Chinese (Traditional)'],['hr','Croatian'],
+    ['cs','Czech'],['da','Danish'],['nl','Dutch'],['en','English'],
+    ['et','Estonian'],['fi','Finnish'],['fr','French'],
+    ['gl','Galician'],['ka','Georgian'],['de','German'],
+    ['el','Greek'],['gu','Gujarati'],['ht','Haitian Creole'],
+    ['ha','Hausa'],['he','Hebrew'],['hi','Hindi'],
+    ['hu','Hungarian'],['is','Icelandic'],['id','Indonesian'],
+    ['ga','Irish'],['it','Italian'],['ja','Japanese'],
+    ['jv','Javanese'],['kn','Kannada'],['kk','Kazakh'],
+    ['km','Khmer'],['ko','Korean'],['ku','Kurdish'],
+    ['ky','Kyrgyz'],['lo','Lao'],['lv','Latvian'],
+    ['lt','Lithuanian'],['mk','Macedonian'],['ms','Malay'],
+    ['ml','Malayalam'],['mt','Maltese'],['mr','Marathi'],
+    ['mn','Mongolian'],['ne','Nepali'],['no','Norwegian'],
+    ['ps','Pashto'],['fa','Persian (فارسی)'],['pl','Polish'],
+    ['pt','Portuguese'],['pa','Punjabi'],['ro','Romanian'],
+    ['ru','Russian'],['sr','Serbian'],['si','Sinhala'],
+    ['sk','Slovak'],['sl','Slovenian'],['so','Somali'],
+    ['es','Spanish'],['sw','Swahili'],['sv','Swedish'],
+    ['tl','Tagalog'],['tg','Tajik'],['ta','Tamil'],
+    ['te','Telugu'],['th','Thai'],['tr','Turkish'],
+    ['uk','Ukrainian'],['ur','Urdu'],['uz','Uzbek'],
+    ['vi','Vietnamese'],['cy','Welsh'],['yi','Yiddish'],
+    ['zu','Zulu']
+  ];
 
-  /*
-    Country and alternative language names.
-    These aliases help users find a language by typing
-    a country name or its local-language name.
-  */
-
-  const aliases={
-    'fa':[
-      'iran','iranian','persia','persian',
-      'ایران','ایرانی','فارسی','زبان فارسی'
-    ],
-    'ar':[
-      'saudi arabia','uae','iraq','arabic',
-      'عربی','عراق','عربستان','امارات'
-    ],
-    'tr':[
-      'turkey','turkish','ترکیه','ترکی'
-    ],
-    'de':[
-      'germany','german','آلمان'
-    ],
-    'fr':[
-      'france','french','فرانسه'
-    ],
-    'es':[
-      'spain','spanish','اسپانیا'
-    ],
-    'it':[
-      'italy','italian','ایتالیا'
-    ],
-    'ru':[
-      'russia','russian','روسیه'
-    ],
-    'zh-CN':[
-      'china','chinese','چین'
-    ],
-    'ja':[
-      'japan','japanese','ژاپن'
-    ],
-    'ko':[
-      'south korea','korean','کره'
-    ],
-    'hi':[
-      'india','hindi','هند'
-    ],
-    'ur':[
-      'pakistan','urdu','پاکستان','اردو'
-    ],
-    'ps':[
-      'afghanistan','pashto','افغانستان','پشتو'
-    ],
-    'nl':[
-      'netherlands','dutch','هلند'
-    ],
-    'pt':[
-      'portugal','brazil','portuguese','پرتغال','برزیل'
-    ],
-    'el':[
-      'greece','greek','یونان'
-    ],
-    'sv':[
-      'sweden','swedish','سوئد'
-    ],
-    'pl':[
-      'poland','polish','لهستان'
-    ],
-    'uk':[
-      'ukraine','ukrainian','اوکراین'
-    ],
-    'en':[
-      'united states','usa','united kingdom',
-      'uk','america','english','انگلیسی'
-    ]
+  const aliases = {
+    fa:['iran','iranian','persia','persian','ایران','ایرانی','فارسی','زبان فارسی'],
+    ar:['saudi arabia','iraq','uae','عربی','عراق','عربستان','امارات'],
+    tr:['turkey','turkish','ترکیه','ترکی'],
+    de:['germany','german','آلمان'],
+    fr:['france','french','فرانسه'],
+    es:['spain','spanish','اسپانیا'],
+    it:['italy','italian','ایتالیا'],
+    ru:['russia','russian','روسیه'],
+    'zh-CN':['china','chinese','چین'],
+    ja:['japan','japanese','ژاپن'],
+    ko:['south korea','korean','کره'],
+    hi:['india','hindi','هند'],
+    ur:['pakistan','urdu','پاکستان','اردو'],
+    ps:['afghanistan','pashto','افغانستان','پشتو'],
+    nl:['netherlands','dutch','هلند'],
+    pt:['brazil','portugal','پرتغال','برزیل'],
+    en:['usa','america','united states','united kingdom','uk','انگلیسی']
   };
 
   function normalize(value) {
-    return (value||'')
+    return (value || '')
       .toLowerCase()
       .normalize('NFD')
       .replace(/[\u0300-\u036f]/g,'')
       .trim();
   }
 
+  function renderLanguages() {
+    const query = normalize(search.value);
+    panel.innerHTML = '';
+
+    const filtered = languages.filter(item => {
+      const code = item[0];
+      const name = normalize(item[1]);
+      const extra = (aliases[code] || []).map(normalize);
+
+      return !query ||
+        name.includes(query) ||
+        normalize(code).includes(query) ||
+        extra.some(alias => alias.includes(query));
+    });
+
+    if (!filtered.length) {
+      const empty = document.createElement('div');
+      empty.className = 'language-empty';
+      empty.textContent = 'No matching language found.';
+      panel.appendChild(empty);
+      return;
+    }
+
+    filtered.forEach(item => {
+      const code = item[0];
+      const label = item[1];
+      const optionButton = document.createElement('button');
+
+      optionButton.type = 'button';
+      optionButton.className = 'language-option';
+      optionButton.textContent = label;
+      optionButton.setAttribute('role','option');
+
+      optionButton.addEventListener('click',function() {
+        const select = host.querySelector('select.goog-te-combo');
+
+        if (!select) {
+          showTranslationMessage(
+            'The language list is available, but the translation service has not loaded. Please try again later.'
+          );
+          return;
+        }
+
+        const available = Array.from(select.options)
+          .some(option => option.value === code);
+
+        if (!available) {
+          showTranslationMessage(
+            'This language is not currently available from the translation service.'
+          );
+          return;
+        }
+
+        select.value = code;
+        select.dispatchEvent(new Event('change',{bubbles:true}));
+
+        toggle.textContent = '🌐 ' + label + ' ▾';
+        closeMenu();
+        search.value = '';
+      });
+
+      panel.appendChild(optionButton);
+    });
+  }
+
+  function showTranslationMessage(message) {
+    panel.innerHTML = '';
+    const note = document.createElement('div');
+    note.className = 'language-empty';
+    note.textContent = message;
+    panel.appendChild(note);
+  }
+
   function openMenu() {
     dropdown.classList.add('open');
     toggle.setAttribute('aria-expanded','true');
-    refreshLanguages();
+    renderLanguages();
     search.focus();
   }
 
@@ -1255,133 +858,30 @@ function googleTranslateElementInit() {
   }
 
   toggle.addEventListener('click',function() {
-    if(dropdown.classList.contains('open')) {
-      closeMenu();
-    } else {
-      openMenu();
-    }
+    if (dropdown.classList.contains('open')) closeMenu();
+    else openMenu();
   });
 
-  function refreshLanguages() {
-    const select=host.querySelector('select.goog-te-combo');
-
-    if(!select) {
-      renderLanguages();
-      return;
-    }
-
-    languages=Array.from(select.options)
-      .filter(option => option.value)
-      .map(option => ({
-        code:option.value,
-        label:(option.textContent||'').trim()
-      }));
-
-    renderLanguages();
-  }
-
-  function matchesLanguage(language,query) {
-    const code=normalize(language.code);
-    const label=normalize(language.label);
-    const aliasesForLanguage=aliases[language.code]||[];
-
-    if(
-      label.includes(query) ||
-      code.includes(query)
-    ) {
-      return true;
-    }
-
-    return aliasesForLanguage.some(alias =>
-      normalize(alias).includes(query)
-    );
-  }
-
-  function renderLanguages() {
-    const query=normalize(search.value);
-    panel.innerHTML='';
-
-    if(!languages.length) {
-      const empty=document.createElement('div');
-      empty.className='language-empty';
-      empty.textContent='Language list is loading...';
-      panel.appendChild(empty);
-      return;
-    }
-
-    const filtered=languages.filter(language =>
-      !query || matchesLanguage(language,query)
-    );
-
-    if(!filtered.length) {
-      const empty=document.createElement('div');
-      empty.className='language-empty';
-      empty.textContent='No matching language found.';
-      panel.appendChild(empty);
-      return;
-    }
-
-    filtered.forEach(language => {
-      const button=document.createElement('button');
-
-      button.type='button';
-      button.className='language-option';
-      button.textContent=language.label;
-      button.setAttribute('role','option');
-
-      button.addEventListener('click',function() {
-        const select=host.querySelector('select.goog-te-combo');
-
-        if(!select) return;
-
-        select.value=language.code;
-        select.dispatchEvent(new Event('change'));
-
-        toggle.textContent='🌐 '+language.label+' ▾';
-
-        closeMenu();
-        search.value='';
-      });
-
-      panel.appendChild(button);
-    });
-  }
-
-  search.addEventListener('input',function() {
-    refreshLanguages();
-  });
+  search.addEventListener('input',renderLanguages);
 
   search.addEventListener('keydown',function(event) {
-    if(event.key==='Escape') {
+    if (event.key === 'Escape') {
       closeMenu();
       toggle.focus();
     }
 
-    if(event.key==='Enter') {
-      const first=panel.querySelector('.language-option');
-      if(first) first.click();
+    if (event.key === 'Enter') {
+      const first = panel.querySelector('.language-option');
+      if (first) first.click();
     }
   });
 
   document.addEventListener('click',function(event) {
-    if(!event.target.closest('.language-box')) {
-      closeMenu();
-    }
+    if (!event.target.closest('.language-box')) closeMenu();
   });
 
-  new MutationObserver(refreshLanguages).observe(host,{
-    childList:true,
-    subtree:true
-  });
-
-  const poll=setInterval(function() {
-    refreshLanguages();
-
-    if(languages.length) {
-      clearInterval(poll);
-    }
-  },700);
-
+  // Render immediately; do not wait for Google Translate.
+  renderLanguages();
 })();
 </script>
 
